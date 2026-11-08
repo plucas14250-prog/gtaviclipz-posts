@@ -1,6 +1,28 @@
 # Playbook: one Instagram post for @gtaviclipz_6
 
-The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes exactly **one** post. Follow these steps in order.
+The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes exactly **one** feed post plus **one** Story. Follow these steps in order.
+
+## 0. What to post in this run
+
+| Slot (US Eastern) | Feed post | Story |
+|---|---|---|
+| **am** (9:53, ~12h Brasília) | Image post, or a carousel (3 to 5 slides) about every other day | The feed image |
+| **pm** (17:53, ~20h Brasília) | **Reel** made with `make_reel.py` | A Story-sized slide from the Reel |
+
+Launch week (2026-11-17 to 2026-11-21): the am slot also posts a Reel instead of an image.
+
+If `research.md` exists in the repo, read it first and apply what it says works (hooks, formats, caption style, hashtags).
+
+**Reels:** make 3 to 4 vertical slides in Canva (format "Instagram Story", one idea per slide: hook on slide 1, payoff in the middle, "segue pra não perder nada" call to action on the last). Export every page as PNG (`export-design`, type png), download them, then:
+```bash
+python3 make_reel.py posts/<date>-pm.mp4 slide1.png slide2.png slide3.png
+python3 publish.py --reel posts/<date>-pm.mp4 caption.txt
+```
+Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ TÁ PRONTO?"). If there are tracks in `music/`, `make_reel.py` adds one automatically.
+
+**Carousels:** make a multi-page Canva design (format "Instagram Post (Portrait)"), export each page as JPG, run `fit.py` on each, then `python3 publish.py --carousel caption.txt p1.jpg p2.jpg ...`.
+
+**Stories:** after the feed post is live, publish the Story with `python3 publish.py --story <file>` (a 9:16 slide, or the feed image). Stories have no caption. Push the file before publishing, like any other media.
 
 ## 1. Pick the content
 
