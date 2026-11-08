@@ -60,10 +60,13 @@ Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ T�
 
 ## 3. Write the caption (in caption.txt, which git ignores)
 
-Match the page's style: Brazilian Portuguese, hype, casual ("mano", "família", "meu consagrado"), emojis like 🔥🤌🏼🌴🚨👀. Write 1 to 4 short lines, end with a question or call to comment, then a blank line and 4 to 6 hashtags taken from:
-`#gta6 #gtavi #jogosbr #gamerbr #gta6brasil #rockstargames #vicecity #gamingbr`
+Follow research.md. Brazilian Portuguese, hype, casual ("mano", "família", "meu consagrado"), emojis like 🔥🤌🏼🌴🚨👀.
+- Line 1 is a hook: a number, a detail, or "PAROU TUDO". On posts likely to spread, line 1 can be "Segue @gtaviclipz_6 pra não perder nada de GTA 6 🤝".
+- Then 1 to 3 short lines and **exactly one question** at the end ("Qual você escolhe?", "Acertou?").
+- Credit the source for news ("Fonte: IGN") and add "Imagens: Rockstar Games" when Rockstar material was used.
+- Last line: **2 or 3 hashtags only**: `#GTA6 #GTAVI` plus at most one of `#gta6brasil #vicecity`.
 
-Name the source for news ("Fonte: IGN") and add "Imagens: Rockstar Games" when Rockstar material was used.
+Formats that work best for big GTA 6 pages (see research.md): comparisons ("Qual é o GTA 6 e qual é a vida real?", GTA 5 vs GTA 6), a daily countdown series, and breaking-news carousels with a red "NOTÍCIA" tag and "ARRASTA PRO LADO".
 
 ## 4. Publish
 
