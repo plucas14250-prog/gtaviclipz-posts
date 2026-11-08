@@ -22,7 +22,7 @@ def run(cmd):
 
 def slide(img, sec, out, zoom_in):
     frames = int(sec * FPS)
-    z = "min(1+0.0012*on,1.12)" if zoom_in else "max(1.12-0.0012*on,1)"
+    z = "min(1+0.0006*on,1.06)" if zoom_in else "max(1.06-0.0006*on,1)"
     vf = (
         f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=30:5,eq=brightness=-0.15[bg];"
         f"[0:v]scale={W}:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,"
