@@ -1,0 +1,194 @@
+# GTA 6 Instagram competitor research
+
+**Accounts:** @houseofgta6 · @gta6.only · @grandtheftvi
+**Window:** roughly Oct 18 – Nov 8, 2026 (the last three weeks before the Nov 19 launch)
+**Method:** looked at each profile in Chrome (view only, nothing liked, followed or commented). Likes and comments come from the grid hover counts, Reel views from each account's Reels tab, and post times from the post timestamps. Times are converted to US Eastern (ET = UTC−5).
+
+---
+
+## TL;DR: what to copy
+
+1. **Make it a comparison or a "spot the difference".** The biggest posts across all three accounts are side-by-sides: GTA 6 vs real life, GTA 5 vs GTA 6, game size vs other games. People comment their guess and share it.
+2. **Put the whole idea on the image in a few bold words.** For example "Guess which one is real life and which is GTA 6", "~110 GB / ~111 GB / ~210 GB", "20 DAYS LEFT". The caption explains; the image stops the scroll.
+3. **Reels get the reach, image posts get the likes.** gta6.only Reels usually pull 100–250K views, with spikes of 400K–1.1M. houseofgta6's highest-liked posts are mostly single images and carousels.
+4. **Run a daily series.** gta6.only's "N days to GTA VI" countdown Reels (made with @pixelmorrow) are some of its best posts for comments. Fans come back every day.
+5. **End every caption with one question.** All three accounts do this ("Did you get it right?", "Physical or digital?", "Where will you be when GTA 6 launches?").
+6. **Post during the morning and the evening.** Mornings are ~9–11am ET and evenings ~6–9pm ET. gta6.only drops its countdown at 8:30am ET.
+7. **Keep hashtags minimal:** 1–3, always including #GTA6. None of these accounts uses hashtag walls.
+
+---
+
+## 1. @houseofgta6: news site in carousel form
+
+**Profile:** 259K followers, 799 posts. Bio: "Your home for everything #GTA6 🏝️". Verified.
+**Volume:** very high, about 4–5 posts a day, sometimes 8+ on news days.
+**Format mix (31 posts sampled):** 25 carousels, 4 Reels, 2 single images.
+**Typical post:** median ~3.7K likes, ~48 comments.
+
+### Top posts in the window
+
+| Post | Format | Likes | Comments | What it is |
+|---|---|---|---|---|
+| [DfQHEdoPYYi](https://www.instagram.com/reel/DfQHEdoPYYi/) | Reel | 39.5K | 671 | "GTA VI appears to include automatic turn signals…" (a small detail spotted in official footage). 1.7M views, 6.2K shares |
+| [DezYTmStnQw](https://www.instagram.com/p/DezYTmStnQw/) | Image (tweet screenshot) | 35.4K | 501 | Repost of a @GTA6Intel tweet: "It's November 19. You drive around Vice City for 3 hours and don't touch a single mission. Life's good." |
+| [DfbAGUxNN6r](https://www.instagram.com/p/DfbAGUxNN6r/) | Image (2-up comparison) | 33.2K | 827 | "Guess which one is real life and which is GTA 6": Grotti Cheetah render vs the real car |
+| [DfAfVZTNCee](https://www.instagram.com/p/DfAfVZTNCee/) | Image (3-row comparison) | 29.3K | 207 | GTA V ~110 GB / RDR2 ~111 GB / GTA VI ~210 GB. **1.2M reposts** |
+| [DfBImt8lRbr](https://www.instagram.com/p/DfBImt8lRbr/) | Carousel | 24.2K | 290 | Install-size follow-up |
+| [DezH8n3NJhu](https://www.instagram.com/p/DezH8n3NJhu/) | Image | 19.5K | 221 | Vehicle undercarriage detail, GTA 5 vs GTA 6 |
+| [DfDN3egDyz2](https://www.instagram.com/p/DfDN3egDyz2/) | Carousel | 17.5K | 438 | "How long will the download take on your connection?" |
+| [De2B5xsNf1y](https://www.instagram.com/p/De2B5xsNf1y/) | Image | 14.3K | 240 | "GTA 5 vs. GTA 6 👀" |
+
+Most Reel views were 20K–480K. The turn-signal Reel (1.7M) was the outlier.
+
+### Hooks
+- **"Follow @HouseofGTA6 for all things GTA 🤝"** as the *first line* on their viral image posts (3 of the top 5). They put the follow ask at the top on posts they expect to spread.
+- **Curiosity and detail spotting:** "appears to include…", "Fans have noticed…", "One of these is a screenshot… the other is a photograph."
+- **Big numbers:** "210 GB", "13 days left", "37 new screenshots".
+- **Time-gap framing:** "Thirteen years separate the two halves of these images 🤯" (GTA V 2013 vs GTA VI).
+
+### Caption style
+- **Long, written like a news article:** average about 1,200 characters, 3–5 short paragraphs, neutral wording ("reportedly", "has not officially confirmed").
+- Structure: **hook line → details → caveat ("remains reported rather than confirmed") → one question → "Source: X" credit → hashtags.**
+- Sparing emoji use, usually one at the end of the hook (👀 🤯 🤝).
+
+### On-screen text
+- Comparison images use **one white bold headline bar across the middle** ("Guess which one is real life and which is GTA 6").
+- Data posts use **huge numbers on each row** (logo + "~210 GB").
+- Tweet screenshots with the GTA VI logo on top of a gameplay still.
+- A small House of GTA 6 logo watermark in the bottom-left corner.
+
+### Hashtags
+#GTA6 on every post. #GTAVI and #RockstarGames on about half. Sometimes #GTA. **Never more than 3–4.**
+
+### Posting times (ET)
+Two clusters: **9–11am ET** (the most posts, 14–16 UTC) and **6–9pm ET** (23–02 UTC). There are some afternoon posts too.
+
+---
+
+## 2. @gta6.only: Reels-first community page
+
+**Profile:** 274K followers, 691 posts. Bio: "The #1 Community Page". Runs giveaways and brand partnerships.
+**Volume:** about 4–5 posts a day, between ~6am and 4:30pm ET.
+**Format mix (52 most recent):** 19 Reels, 17 carousels, 15 single images.
+**Typical post:** median ~5.6K likes, ~58 comments. **Median Reel: ~150K views.**
+
+### Top posts in the window
+
+| Post | Format | Views | Likes | Comments | What it is |
+|---|---|---|---|---|---|
+| [DfTW_IQig-p](https://www.instagram.com/p/DfTW_IQig-p/) | Reel | **1.1M** | 10.3K | 95 | "Rockstar moved a date *up* instead of delaying it": pre-load starts Nov 10. PS5 home-screen footage |
+| [De7gnYaOvSY](https://www.instagram.com/reel/De7gnYaOvSY/) | Reel | 628K | – | – | – |
+| [De97PnouSbe](https://www.instagram.com/reel/De97PnouSbe/) | Reel | 537K | – | – | – |
+| [DfNzjUKuwd_](https://www.instagram.com/p/DfNzjUKuwd_/) | Reel | 408K | 24.4K | 185 | GTA 6 TV spot airing in Argentina |
+| [DfFHlDqBoSH](https://www.instagram.com/p/DfFHlDqBoSH/) | Reel (collab w/ @pixelmorrow) | 338K | 24.3K | 312 | "20 days to GTA VI. Golden hour in the swamp…" Countdown |
+| [DfXs07HlWAi](https://www.instagram.com/p/DfXs07HlWAi/) | Carousel | – | **26.7K** | 206 | "Florida rapper Kodak Black will be featured as an NPC in GTA 6." 1.1M reposts |
+| [DfcSxNyhBkp](https://www.instagram.com/p/DfcSxNyhBkp/) | Reel (countdown) | 256K | 14.9K | 362 | "11 days to GTA VI." |
+| [DfL4RfQoUnU](https://www.instagram.com/p/DfL4RfQoUnU/) | Reel | 241K | 15.8K | 53 | "IT'S OFFICIALLY GTA MONTH" |
+| [Dfak_T7jqoX](https://www.instagram.com/p/Dfak_T7jqoX/) | Carousel | – | 13.7K | 119 | "WE ARE LESS THAN 300 HOURS AWAY FROM GTA 6 ⏳🎮" |
+| [Dew93LSC1dn](https://www.instagram.com/p/Dew93LSC1dn/) | Image (giveaway) | – | 2.4K | **2,244** | "🎁 GTA VI GIVEAWAY 🎁" (comments farmed by the giveaway) |
+
+### Hooks
+- **Countdown openers:** "20 days to GTA VI.", "11 days to GTA VI.", "Less than 300 hours away".
+- **Celebrity or culture angle:** Kodak Black NPC; Travis Scott × Nike × Rockstar rumour (12.1K likes).
+- **"First ever" / surprise:** "for the first time, they moved a date up instead of delaying it".
+- **ALL-CAPS hype lines** for milestone posts ("IT'S OFFICIALLY GTA MONTH").
+
+### Caption style
+- **Short:** average about 190 characters, 1–3 lines. Very different from houseofgta6.
+- Countdown template: *"N days to GTA VI. [one cinematic sentence about the clip]. [practical info, e.g. pre-load opens in X days]. [question, e.g. Who's coming on the airboat with you?]"*
+- Fact posts: one sentence of news plus one supporting detail. No source credit most of the time.
+
+### On-screen text
+- Countdown Reels use a fixed template: GTA VI logo, **"COUNTDOWN / 20 / DAYS LEFT"**, a progress bar, and "ARRIVES NOV 19TH 2026", over slow-motion trailer footage with a licensed song.
+- News Reels are often raw screen recordings (PS5 home screen, TV ads) with little or no text overlay. The news itself carries them.
+- Utility graphics, for example an "AVOID GTA VI SPOILERS – keywords to mute" list.
+
+### Hashtags
+Almost always exactly **#GTA6 #GTAVI**, sometimes plus #Leonida or #GTA6World. Two to four tags.
+
+### Posting times (ET)
+Spread from **6am to 4:30pm ET** (11:00–21:30 UTC), about one post every 1–2 hours. **Countdown Reels go out at 8:30am ET** every day.
+
+---
+
+## 3. @grandtheftvi: few posts, "breaking news" carousels
+
+**Profile:** 210K followers, only 117 posts in total. Run by a marketing agency (partnership email in bio).
+**Volume:** low, about 9 posts in three weeks (roughly every 2–3 days).
+**Format mix:** mostly carousels and a few videos. Its Reels tab has nothing recent.
+**Typical post:** ~3.5–7K likes, 30–110 comments. The 3 pinned evergreen posts have 34–46K likes each.
+
+### Top posts in the window
+
+| Post | Format | Likes | Comments | What it is |
+|---|---|---|---|---|
+| [DfENbRdDiFq](https://www.instagram.com/p/DfENbRdDiFq/) | Video | 20.1K | 324 | "NEW GTA 6 GAMEPLAY FOOTAGE FEATURED IN SOUTH PARK!" |
+| [DfTkpchDfrM](https://www.instagram.com/p/DfTkpchDfrM/) | Carousel | 13.8K | 158 | "ROCKSTAR GAMES REVEALS A NEW GTA 6 SCREENSHOT!" Vice City vs Miami |
+| [DfL5DFejd08](https://www.instagram.com/p/DfL5DFejd08/) | Carousel | 9.7K | 87 | "GTA 6 OFFICIALLY RELEASES THIS MONTH!" |
+| [DfEG4u7DWf3](https://www.instagram.com/p/DfEG4u7DWf3/) | Carousel | 7.5K | 91 | "12 NEW GTA 6 SCREENSHOTS HAVE BEEN REVEALED!" (EDGE Magazine) |
+| [DfYSnVYjYdN](https://www.instagram.com/p/DfYSnVYjYdN/) | Carousel | 6.4K | 35 | "NEW OFFICIAL GTA 6 MAP SCREENSHOTS REVEALED!" |
+| [DermGSaFjUw](https://www.instagram.com/p/DermGSaFjUw/) | Carousel | 6.2K | 78 | "ONE MONTH UNTIL GTA 6!" |
+
+### Hooks
+- **Every caption opens with an ALL-CAPS headline ending in "!"**, like a tabloid ("NEW … REVEALED!", "… OFFICIALLY RELEASES THIS MONTH!").
+- The big winner was a **crossover with mainstream culture** (South Park), same as gta6.only's Kodak Black post.
+
+### Caption style
+- Medium length (about 580–985 characters). Headline, then 2–4 paragraphs of friendly hype, a question ("Which screenshot is your favorite?"), **"Via: @rockstargames"** credit, then hashtags.
+
+### On-screen text
+- Cover slide = key art or a screenshot, a **red "NEWS" tag**, a **huge bold white headline with one word in red** ("GTA VI WILL **RELEASE** IN EXACTLY 1 MONTH"), and **"SWIPE FOR MORE"** with carousel dots.
+- Round GTA VI logo badge in the top-left corner.
+
+### Hashtags
+Always exactly **#gta #gta6 #gaming**, nothing else.
+
+### Posting times (ET)
+Mostly **late night, 11pm–midnight ET** (04–05 UTC), plus some around 9am–1pm ET.
+
+---
+
+## 4. Cross-account patterns
+
+### What gets the most views
+- **Reels with "news you can see":** official footage details (turn signals, 1.7M), PS5 pre-load screen (1.1M), TV ads (408K). The clip *is* the proof.
+- **Countdown Reels** keep a steady 150–340K views each and bring people back every day.
+
+### What gets the most likes, shares and reposts
+- **Side-by-side comparisons** (real vs game, GTA 5 vs 6, file sizes). These get the most reposts by far (1.2M on the GB graphic).
+- **Celebrity or pop-culture crossovers** (Kodak Black, Travis Scott/Nike, South Park).
+- **Relatable "launch day" fantasies** (3 hours cruising without doing a mission).
+
+### What gets the most comments
+- **Giveaways** (2,244 comments, but low likes, so the reach isn't organic).
+- **"Guess" posts** (827 on "real vs GTA 6").
+- **Personal questions about launch day**: physical vs digital, download time on *your* internet, "Who's coming with you?"
+- **Uncertain or controversial claims** (no online mode yet, 167 comments on an otherwise average post).
+
+### Format summary
+
+| | houseofgta6 | gta6.only | grandtheftvi |
+|---|---|---|---|
+| Main format | Carousel | Reel | Carousel |
+| Posts/day | 4–5+ | 4–5 | ~0.4 |
+| Caption length | Long (~1,200 chars) | Short (~190) | Medium (~650) |
+| Hook style | Detail/curiosity + "Follow @" | Countdown / celebrity | ALL-CAPS headline! |
+| Hashtags | #GTA6 (+#GTAVI #RockstarGames) | #GTA6 #GTAVI | #gta #gta6 #gaming |
+| Source credit | "Source: X" | rarely | "Via: @rockstargames" |
+| Ends with a question | yes | yes | yes |
+
+---
+
+## 5. Suggested playbook for @gtaviclipz
+
+1. **Daily countdown Reel at ~8:30am ET** until Nov 19: 7–12 s of trailer footage, a big "X DAYS LEFT" overlay, a one-line caption and a question. After launch, switch to "Day X in Leonida".
+2. **2–3 comparison posts a week** (real Miami vs Vice City, GTA 5 vs 6, NPC/car detail), with one bold headline on the image: "Guess which one is GTA 6".
+3. **Breaking-news carousels within an hour of a Rockstar drop**: cover slide with a red "NEWS" tag and a bold headline, plus "SWIPE FOR MORE".
+4. **Captions:** a hook line (number, detail or "first ever"), 2–3 short lines, one question, a source credit, then **#GTA6 #GTAVI** (and at most one more).
+5. **On posts likely to spread**, put "Follow @gtaviclipz for daily GTA 6 clips 🤝" as line one, like houseofgta6.
+6. **Post twice a day:** 8–11am ET and 6–9pm ET.
+7. **Launch-week opportunities:** first-hour gameplay clips, "things you missed", map size comparisons, celebrity NPC sightings, and side-by-side Miami landmarks.
+
+---
+
+*Limitations: like counts were hidden on some houseofgta6 posts, so their numbers come from the ~46 posts where they show. Engagement counts were read on Nov 8, 2026 and keep rising on recent posts.*
