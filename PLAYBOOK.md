@@ -1,36 +1,40 @@
 # Playbook: one Instagram post for @gtaviclipz_6
 
-Each scheduled run makes and publishes exactly **one** post. Follow these steps in order.
+The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes exactly **one** post. Follow these steps in order.
 
 ## 1. Pick the content
 
 1. Read `log.json` to see past posts. Don't repeat a topic or headline from the last 10 posts.
 2. Find today's date in US Eastern time.
-3. Choose a format, rotating so two posts in a row don't use the same one:
-   - **countdown**: only before launch (GTA VI launches **2026-11-19**). Days left = launch date minus today's date.
-   - **noticia**: search the web for GTA VI news from the last 48 hours. Use only facts reported by at least one reliable outlet (IGN, Kotaku, Eurogamer, Insider Gaming, Rockstar Newswire, etc.). If it's only a rumor, say "RUMOR" in the kicker. Never invent news.
-   - **enquete**: a question to get comments, like "Qual carro você vai roubar primeiro?" or "Lucia ou Jason?"
-   - **curiosidade**: a confirmed fact about the game, Vice City, or the series.
-   - After launch, swap countdown for tips, "dias desde o lançamento", and player reaction posts.
+3. Search the web for what's trending about GTA VI in the last 48 hours (news, viral moments, official Rockstar posts).
+4. Choose a format. Rotate so two posts in a row don't use the same one:
+   - **countdown**: only before launch (GTA VI launches **2026-11-19**). Days left = launch date minus today.
+   - **noticia**: real news from a reliable outlet (IGN, Kotaku, Eurogamer, Insider Gaming, Rockstar Newswire). Use the "RUMOR" label if it's unconfirmed. Never invent news.
+   - **enquete**: a question to get comments, e.g. "Lucia ou Jason?" or "Qual carro você vai roubar primeiro?"
+   - **curiosidade**: a confirmed fact about the game, Vice City or the series.
+   - After launch, swap countdown for tips, "dias desde o lançamento" and player reaction posts.
 
-## 2. Make the image
+## 2. Make the image in Canva
 
-```bash
-python3 make_post.py countdown <days> posts/<YYYY-MM-DD>-<am|pm>.jpg
-python3 make_post.py card "<KICKER>" "<HEADLINE>" "<SUBTEXT>" posts/<YYYY-MM-DD>-<am|pm>.jpg
-```
+1. Use the Canva `create-design` tool, format "Instagram Post (Portrait)". The brief should cover:
+   - The exact Portuguese text: a big headline (at most ~8 words), an optional short line under it, and "@gtaviclipz_6" small at the bottom.
+   - Style: bold modern gaming news look, neon pink and cyan accents, Miami/Vice City at night or sunset, a dark gradient behind the text so it's readable.
+   - No emoji in the image text.
+2. **Rockstar's official material may be used as a base** (official trailers, screenshots and artwork from rockstargames.com / Rockstar Newswire). To use one, add it to Canva with `upload-asset-from-url` and pass the asset to the design. When you do, the caption must include "Imagens: Rockstar Games". Never use leaked or datamined material, and never make the post look like an official Rockstar post.
+3. Poll `get-create-design-async-job` until it's done, then `export-design` as JPG at width 1080.
+4. Download the exported file with curl, then crop it to Instagram size:
+   ```bash
+   python3 fit.py <downloaded.jpg> posts/<YYYY-MM-DD>-<am|pm>.jpg
+   ```
+5. Open the image and check it: all text spelled correctly in Portuguese, nothing cut off, readable. If it's bad, generate again (at most 2 more tries).
+6. Fallback if Canva fails: `python3 make_post.py card "<KICKER>" "<HEADLINE>" "<SUBTEXT>" posts/<file>.jpg`, or `countdown <days>`.
 
-- Text on the image is Brazilian Portuguese, short (headline at most ~12 words), and has **no emoji** because the font can't render them.
-- Kicker examples: `NOTÍCIA`, `RUMOR`, `VOCÊ DECIDE`, `VOCÊ SABIA?`, `URGENTE`.
-- Open the image and check it: no cut-off text and nothing unreadable. Fix it and regenerate if needed.
-- Never use Rockstar's artwork, logos, screenshots or footage.
+## 3. Write the caption (in caption.txt, which git ignores)
 
-## 3. Write the caption
-
-Match the page's style: Brazilian Portuguese, hype, casual ("mano", "família", "meu consagrado"), with emojis like 🔥🤌🏼🌴🚨👀. Write 1 to 4 short lines, end with a question or call to comment, then a blank line and 4 to 6 hashtags taken from:
+Match the page's style: Brazilian Portuguese, hype, casual ("mano", "família", "meu consagrado"), emojis like 🔥🤌🏼🌴🚨👀. Write 1 to 4 short lines, end with a question or call to comment, then a blank line and 4 to 6 hashtags taken from:
 `#gta6 #gtavi #jogosbr #gamerbr #gta6brasil #rockstargames #vicecity #gamingbr`
 
-For news posts, name the source in the caption (e.g. "Fonte: IGN").
+Name the source for news ("Fonte: IGN") and add "Imagens: Rockstar Games" when Rockstar material was used.
 
 ## 4. Publish
 
@@ -49,5 +53,6 @@ Append to `log.json`: `{"date", "slot" (am/pm), "format", "headline", "image", "
 ## Rules
 
 - Exactly one post per run. Never publish twice.
+- Never repost other creators' clips or images without permission.
 - Keep it safe for all ages: no hate, no politics, no misleading claims.
-- Don't put the caption file or anything secret in the repo.
+- Don't commit the caption file or anything secret.
