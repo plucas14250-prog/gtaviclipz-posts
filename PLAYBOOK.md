@@ -20,6 +20,13 @@ python3 publish.py --reel posts/<date>-pm.mp4 caption.txt
 ```
 Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ TÁ PRONTO?"). If there are tracks in `music/`, `make_reel.py` adds one automatically.
 
+**Reels are NOT auto-published.** The owner adds a trending Instagram song in the phone app, which the API can't do. So for a Reel:
+1. Build it with `make_reel.py` and push it to the repo (no music file needed).
+2. Do **not** run `publish.py --reel`.
+3. Send the owner the video with `SendUserFile` (status "proactive"), and in your message give: the caption ready to copy, and 2 to 3 suggested song vibes that fit (e.g. "funk/phonk agressivo", "synthwave anos 80"). Tell them to pick whatever sound is trending in the Reels audio tab.
+4. Still publish the Story automatically (a slide from the Reel).
+5. Log it with `"format": "reel-manual"` and `"permalink": "sent to owner"`.
+
 **Carousels:** make a multi-page Canva design (format "Instagram Post (Portrait)"), export each page as JPG, run `fit.py` on each, then `python3 publish.py --carousel caption.txt p1.jpg p2.jpg ...`.
 
 **Stories:** after the feed post is live, publish the Story with `python3 publish.py --story <file>` (a 9:16 slide, or the feed image). Stories have no caption. Push the file before publishing, like any other media.
