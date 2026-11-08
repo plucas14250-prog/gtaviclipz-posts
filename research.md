@@ -191,4 +191,71 @@ Mostly **late night, 11pm–midnight ET** (04–05 UTC), plus some around 9am–
 
 ---
 
+## 6. Davy Jones (@odavyjones): Brazilian creator, meme Reels with his own face
+
+**Profile:** [@odavyjones](https://www.instagram.com/odavyjones/), "Davy Jones", verified. **1.2M followers**, 609 posts, 731 following. He's the GTA creator from Flow Games, and @rockstargames follows him. Bio: "PRÉ VENDA GTA VI" plus an Amazon affiliate link to the GTA VI pre-order. The pinned post is a paid TCL TV ad.
+**Volume:** very low on Instagram. **Only 2 posts in the window (Oct 18 – Nov 8)**, and both are collab Reels where @acreano is the main author and Davy is a co-author. The one before that came on Oct 15. Instagram is a side channel for him; the main GTA content is on Flow Games and YouTube.
+**Format:** Reels only (100% of the last 15). Most of them are collabs with meme editors (@acreano, @crosstossaur, @gameplayrj), plus a few #publi ads.
+**Typical reach:** his non-ad Reels usually get **750K–950K views**. Collab memes peak at 2–3.5M. Ads drop to ~120K.
+
+### Posts in the window
+
+| Post | Date (ET / Brasília) | Format | Views | Likes | Comments | Shares | What it is |
+|---|---|---|---|---|---|---|---|
+| [Deu2me5B4Xi](https://www.instagram.com/p/Deu2me5B4Xi/) | Tue Oct 20, 5:59pm ET / 6:59pm BRT | Collab Reel (@acreano + 2) | **864K** | 46.6K | **355** | **9.6K** | Meme. On-screen text "Tentando não ir de F antes de sair GTA 6:" ("trying not to die before GTA 6 comes out") over Davy pouring an energy drink with exaggerated care. Audio is the official GTA VI track "Flower In A Hurricane". |
+| [DfQT_XEMMka](https://www.instagram.com/p/DfQT_XEMMka/) | Mon Nov 2, 4:52pm ET / 6:52pm BRT | Collab Reel (@acreano + 3), **labelled "AI content"** | 766K | **57.3K** | 288 | 8.7K | Meme. On-screen text "*Eu atrOpelandO meu primeiro NPC no GTA 6 (após 13 anos de espera)*" ("me running over my first NPC in GTA 6, after 13 years of waiting") over an AI-edited shot of Davy deadpan at a steering wheel, set to Frank Sinatra's "My Way". |
+
+### Just before the window (for context)
+
+| Post | Date | Format | Views | Likes | Comments | Shares | What it is |
+|---|---|---|---|---|---|---|---|
+| [DehIc5YR6_L](https://www.instagram.com/p/DehIc5YR6_L/) | Thu Oct 15, 10:07am ET / 11:07am BRT | Own Reel (original audio, @gameplayrj cut) | **953K** | **89.2K** | **643** | **10.5K** | "GTA 6 NOVO TRAILER SAIU DO NADA" ("new GTA 6 trailer dropped out of nowhere"): talking-head reaction with headphones and burned-in subtitles, posted the same day as the launch trailer. His best post of the last month on every metric. |
+| [DecuVKRhag3](https://www.instagram.com/p/DecuVKRhag3/) | Tue Oct 13 | #publi Reel | 119K | 3.2K | 29 | – | Paid ad for the game End of Abyss. It shows how much less reach ads get. |
+
+Older standouts on his Reels tab: 7.6M views on a "win a PS5" promo (Sep 21), 3.5M on a @crosstossaur collab "Eis que GTA 6 LANÇOU! Reunião na diretoria kkkk" (Sep 30), 3.1M and 2M on other meme collabs.
+
+### Hooks
+- **His face is the hook.** Every top post opens on a close-up of Davy's deadpan or exaggerated expression. Fans know the face, so the first frame works before anyone reads the text.
+- **Relatable "waiting for GTA 6" jokes** written as a quoted situation in asterisks: "*Eu atropelando meu primeiro NPC no GTA 6…*", "Tentando não ir de F antes de sair GTA 6:".
+- **The 13-year wait** (GTA V 2013 → GTA VI 2026) as the emotional angle, the same idea houseofgta6 uses.
+- **Breaking-news reaction in ALL CAPS:** "GTA 6 NOVO TRAILER SAIU DO NADA". It's short, urgent and posted within hours of the drop.
+
+### Caption style (Portuguese)
+- **Very short, one line plus hashtags** (~40–60 characters). Examples: "Menos de 1 mês pro GTA 6 e a gente nesse nível", "Esperando o grande momento do GTA 6".
+- **Casual Brazilian internet slang:** "ir de F" (to die / pay respects), "a gente nesse nível", "kkkk", "cês" ("vocês").
+- No question at the end, no source credit and no "follow" ask. The opposite of the US accounts. The joke sits in the on-screen text and the caption just labels it.
+- Ads are the exception: long, first-person and tagged **#publi** at the start.
+
+### On-screen text
+- **Meme template:** white Impact-style text with a black outline at the top, often wrapped in asterisks to mean "a situation". Sometimes there's a white bar at the top with black text ("Tentando não ir de F…").
+- **Reaction clips:** burned-in subtitles, one word at a time, in yellow ("absolutamente").
+- Collabs carry the meme editor's watermark (e.g. "@gameplayrj").
+
+### Hashtags
+Always **3 lowercase tags: #gta #gta6 #rockstar** (or #rockstargames). Never more. Fan pages that repost his clips add #davyjones.
+
+### Posting times
+- The two window posts both went out around **6:50–7pm Brasília (≈5–6pm ET)**, early weekday evening in Brazil.
+- The news reaction went out **late morning (11am BRT / 10am ET) on trailer day**. News gets posted right away; memes go out in the evening.
+
+### GTA 6 news and claims he posted
+
+| Date | Claim | Confirmed? |
+|---|---|---|
+| Oct 15 (just before the window) | "GTA 6 novo trailer saiu do nada": a new GTA 6 trailer is out | **Confirmed by Rockstar.** The launch trailer was released on Oct 15, 2026 ([GamingBible](https://www.gamingbible.com/news/gta-6-launch-trailer-542576-20261015), [gHacks](https://www.ghacks.net/2026/10/16/rockstar-releases-the-gta-6-launch-trailer-ahead-of-the-november-19-console-release/)). I didn't check whether it really dropped "out of nowhere" (unannounced). |
+| Oct 20 | "Menos de 1 mês pro GTA 6": the game is less than a month away | **Confirmed by Rockstar.** The release date is Nov 19, 2026 on PS5 / Xbox Series X\|S ([GamesRadar](https://www.gamesradar.com/games/grand-theft-auto/gta-6-delayed-6-more-months-as-rockstar-commits-to-november-2026-and-says-sorry), [TweakTown](https://www.tweaktown.com/news/108727/rockstar-officially-delays-gta-6-again-will-now-release-on-november-19-2026/index.html)). |
+| Oct 20 | The audio on the Reel is "Flower In A Hurricane [From GTAVI: Original Score]" (implied: an official GTA VI song) | **Confirmed.** Justice ft. Tame Impala, SZA and King Gizzard, released Oct 15 with the launch trailer, and Justice is scoring the game ([Forbes](https://www.forbes.com/sites/brianmazique/2026/10/15/sza-and-tame-impala-just-dropped-gta-6s-theme-song---heres-how-to-listen/), [Apple Music](https://music.apple.com/us/album/flower-in-a-hurricane-from-gtavi-original-score-single/6819802963)). |
+| Nov 2 | "Após 13 anos de espera": 13 years between games | Correct as a fact (GTA V 2013 → GTA VI 2026). It's a joke, not a news claim. The clip itself is AI-edited, not GTA 6 gameplay. |
+
+**Claims other accounts attribute to him (not posted on his Instagram):** fan pages like @omodohard and @dwgames_xs repost cuts of him from Flow Games, e.g. "Davy Jones perguntou e a Rockstar respondeu" about fuel/gas stations (Nov 6). That one goes back to his earlier visit to Rockstar North, where Rob Nelson said refuelling takes "about 10 seconds". **Reported by news outlets** ([Dexerto](https://www.dexerto.com/gta/rockstar-says-gta-6s-controversial-gas-stops-take-just-10-seconds-you-cant-complain-3406246/), [Critical Hits](https://criticalhits.com.br/games/gta-6-tera-abastecimento-rapido-e-rockstar-defende-mecanica-de-combustivel-leva-10-segundos-nao-da-pra-reclamar/)) but not confirmed by Rockstar in an official post. The 10 seconds is his recollection of the demo, not a published spec.
+
+### What to take from him
+1. **A recognisable face plus one relatable line beats long captions.** His 1-line memes match the US pages' best posts with a fraction of the text.
+2. **Collab with meme editors.** Nearly all his reach in the window came from co-authored Reels, so it lands on both accounts' followers.
+3. **React the same day as Rockstar drops.** His trailer-day reaction was his best post of the month.
+4. **Ads cost reach** (119K vs ~850K). Keep sponsored posts rare.
+5. **For a Brazilian audience,** write captions in casual PT-BR slang with lowercase #gta #gta6 #rockstar, and post around 6–7pm Brasília.
+
+---
+
 *Limitations: like counts were hidden on some houseofgta6 posts, so their numbers come from the ~46 posts where they show. Engagement counts were read on Nov 8, 2026 and keep rising on recent posts.*
