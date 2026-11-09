@@ -8,6 +8,7 @@ Example:
 
 Options:
   --start / --dur   where in the trailer to cut (seconds)
+  --cuts            montage instead: "start:dur:x,start:dur:x,..." (see footage/*-shots.json)
   --x               which part of the wide frame to keep, 0 = left, 0.5 = center, 1 = right
   --zoom            slow push-in over the clip (1.0 = none, 1.2 = 20% closer by the end)
   --slow            playback speed (0.5 = half speed, good for details)
@@ -31,6 +32,7 @@ W, H = 1080, 1920
 F_BLACK = "/usr/share/fonts/opentype/inter/InterDisplay-Black.otf"
 F_BOLD = "/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf"
 RED = (230, 20, 40)
+BAR = 640  # height of the black text bar at the top
 PINK = (255, 40, 140)
 
 
@@ -67,13 +69,12 @@ def fit_font(d, text, path, start, max_w, max_lines):
 def overlay_png(args, path):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, BAR], fill=(0, 0, 0, 255))
+    # soft fade from the bar into the footage
+    for i in range(60):
+        d.line([(0, BAR + i), (W, BAR + i)], fill=(0, 0, 0, int(255 * (1 - i / 60))))
 
-    # Dark gradient at the top so the headline is always readable.
-    if args.top or args.tag:
-        for y in range(820):
-            a = int(210 * (1 - y / 820) ** 1.4)
-            d.line([(0, y), (W, y)], fill=(0, 0, 0, a))
-    y = 150
+    y = 110
     if args.tag:
         tf = ImageFont.truetype(F_BOLD, 46)
         tw = d.textlength(args.tag.upper(), font=tf)
@@ -96,8 +97,9 @@ def overlay_png(args, path):
         bf = ImageFont.truetype(F_BOLD, 40)
         bw = d.textlength(args.badge.upper(), font=bf)
         x0 = W - 60 - bw - 48
-        d.rounded_rectangle([x0, 60, W - 60, 128], radius=34, fill=PINK)
-        d.text((x0 + 24, 72), args.badge.upper(), font=bf, fill="white")
+        d.rounded_rectangle([x0, 110, W - 60, 178], radius=34, fill=PINK)
+        d.text((x0 + 24, 122), args.badge.upper(), font=bf, fill="white")
+    args.bar_h = BAR
 
     if args.bottom:
         sf, lines = fit_font(d, args.bottom.upper(), F_BOLD, 58, W - 200, 2)
@@ -121,7 +123,8 @@ def overlay_png(args, path):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("src")
-    p.add_argument("--start", type=float, required=True)
+    p.add_argument("--start", type=float)
+    p.add_argument("--cuts")
     p.add_argument("--dur", type=float, default=8)
     p.add_argument("--x", type=float, default=0.5)
     p.add_argument("--zoom", type=float, default=1.1)
@@ -135,23 +138,39 @@ def main():
     p.add_argument("--out", required=True)
     args = p.parse_args()
 
-    out_dur = args.dur / args.slow
     tmp = tempfile.mkdtemp()
     ov = os.path.join(tmp, "overlay.png")
     overlay_png(args, ov)
-
     z = max(args.zoom, 1.0)
-    x = min(max(args.x, 0.0), 1.0)
-    vf = (
-        f"[0:v]setpts=(PTS-STARTPTS)/{args.slow},"
-        f"scale=w=-2:h='trunc({H}*(1+({z}-1)*t/{out_dur})/2)*2':eval=frame,"
-        f"crop={W}:{H}:'(iw-{W})*{x}':'(ih-{H})/2',fps=30,format=yuv420p[v];"
-        f"[v][1:v]overlay=0:0[out]"
-    )
-    cmd = ["ffmpeg", "-y", "-ss", str(args.start), "-t", str(args.dur), "-i", args.src,
-           "-i", ov]
-    if args.keep_audio:
-        cmd += ["-filter_complex", vf + f";[0:a]atempo={max(args.slow, 0.5)}[a]",
+
+    if args.cuts:
+        segs = []
+        for part in args.cuts.split(","):
+            a = part.split(":")
+            segs.append((float(a[0]), float(a[1]), float(a[2]) if len(a) > 2 else args.x))
+    else:
+        if args.start is None:
+            p.error("give --start or --cuts")
+        segs = [(args.start, args.dur, args.x)]
+
+    chains, labels, total = [], [], 0.0
+    for i, (st, du, xx) in enumerate(segs):
+        od = du / args.slow
+        xx = min(max(xx, 0.0), 1.0)
+        chains.append(
+            f"[0:v]trim=start={st}:duration={du},setpts=(PTS-STARTPTS)/{args.slow},"
+            f"scale=w=-2:h='trunc({H - BAR}*(1+({z}-1)*t/{od})/2)*2':eval=frame,"
+            f"crop={W}:{H - BAR}:'(iw-{W})*{xx}':'(ih-{H - BAR})/2',"
+            f"pad={W}:{H}:0:{BAR}:black,fps=30,format=yuv420p,setsar=1[s{i}]")
+        labels.append(f"[s{i}]")
+        total += od
+    vf = ";".join(chains) + ";" + "".join(labels) + f"concat=n={len(segs)}:v=1:a=0[v];[v][1:v]overlay=0:0[out]"
+    out_dur = total
+
+    cmd = ["ffmpeg", "-y", "-i", args.src, "-i", ov]
+    if args.keep_audio and len(segs) == 1:
+        st, du, _ = segs[0]
+        cmd += ["-filter_complex", vf + f";[0:a]atrim=start={st}:duration={du},asetpts=PTS-STARTPTS,atempo={max(args.slow, 0.5)}[a]",
                 "-map", "[out]", "-map", "[a]"]
     else:
         cmd += ["-f", "lavfi", "-t", str(out_dur), "-i", "anullsrc=r=44100:cl=stereo",

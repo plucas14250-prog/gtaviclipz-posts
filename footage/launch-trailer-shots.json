@@ -1,0 +1,33 @@
+{
+  "file": "footage/launch-trailer.mp4",
+  "note": "Shots from the official GTA VI launch trailer. start/dur in seconds, x = where the subject is (0 left, 1 right) for the vertical crop. Prefer 'characters' shots for Reels.",
+  "characters": [
+    {"start": 6.4,  "dur": 2.7, "x": 0.72, "desc": "Jason close-up, polishing a boat"},
+    {"start": 11.3, "dur": 2.1, "x": 0.58, "desc": "Jason on the phone at the marina"},
+    {"start": 18.4, "dur": 2.0, "x": 0.5,  "desc": "gang in a green lowrider convertible"},
+    {"start": 25.8, "dur": 1.3, "x": 0.3,  "desc": "Lucia leaning on a convertible, Jason driving"},
+    {"start": 32.15,"dur": 0.6, "x": 0.45, "desc": "Jason in action, golden light"},
+    {"start": 34.5, "dur": 1.2, "x": 0.47, "desc": "Lucia and partner walking into a bank vault"},
+    {"start": 35.9, "dur": 1.3, "x": 0.62, "desc": "Lucia, sunset light through a window"},
+    {"start": 37.35,"dur": 0.8, "x": 0.5,  "desc": "man celebrating in a red nightclub"},
+    {"start": 39.9, "dur": 1.7, "x": 0.5,  "desc": "Jason and Lucia leaning on a red car"},
+    {"start": 44.5, "dur": 1.7, "x": 0.55, "desc": "dancer in a pink club"},
+    {"start": 52.35,"dur": 1.0, "x": 0.6,  "desc": "Jason on a rooftop, explosion behind"},
+    {"start": 56.5, "dur": 1.2, "x": 0.5,  "desc": "muscular man in a gym"},
+    {"start": 57.9, "dur": 1.2, "x": 0.62, "desc": "man lying on a couch, tattoos"},
+    {"start": 59.3, "dur": 3.0, "x": 0.4,  "desc": "masked robber, explosion in the city"},
+    {"start": 62.55,"dur": 0.8, "x": 0.58, "desc": "Lucia on a balcony at sunset"},
+    {"start": 64.3, "dur": 2.0, "x": 0.55, "desc": "man pointing a pistol, teal light"},
+    {"start": 66.5, "dur": 1.3, "x": 0.5,  "desc": "Jason and Lucia hugging at sunset"},
+    {"start": 71.45,"dur": 0.6, "x": 0.55, "desc": "Jason aiming a sniper rifle, city at night"},
+    {"start": 72.15,"dur": 0.8, "x": 0.35, "desc": "Lucia firing a rifle, explosion behind"}
+  ],
+  "places": [
+    {"start": 2.1,  "dur": 2.2, "x": 0.45, "desc": "'The Keys' welcome sign"},
+    {"start": 4.5,  "dur": 1.7, "x": 0.5,  "desc": "Brian's Marina aerial"},
+    {"start": 13.55,"dur": 0.9, "x": 0.45, "desc": "seaplane on the water"},
+    {"start": 46.4, "dur": 1.7, "x": 0.6,  "desc": "police car on a Vice City street"},
+    {"start": 54.6, "dur": 1.7, "x": 0.45, "desc": "biplane with pink smoke over the beach"},
+    {"start": 73.2, "dur": 6.0, "x": 0.5,  "desc": "Vice City aerial at dusk"}
+  ]
+}

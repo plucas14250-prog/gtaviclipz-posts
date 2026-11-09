@@ -22,13 +22,16 @@ python3 publish.py --reel posts/<date>-pm.mp4 caption.txt
 ```
 Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ TÁ PRONTO?"). If there are tracks in `music/`, `make_reel.py` adds one automatically.
 
-**Reels from real footage (preferred):** if `footage/` has .mp4 files, make Reels from them instead of slides. Real GTA VI footage performs far better than slides (see research.md).
-1. `python3 scenes.py footage/<file>.mp4 /tmp/scenes` and open the contact sheet. Pick a strong shot: a vehicle, a character close-up, the city, a small detail.
-2. Check `log.json` so you don't reuse the same trailer moment within 7 days (log `"source": "<file>@<start>s"`).
-3. `python3 make_clip.py footage/<file>.mp4 --start <s> --dur 7 --tag "<kicker>" --top "<hook>" --line2 "<detail>" --badge "FALTAM N DIAS" --zoom 1.15 --out posts/<date>-<slot>.mp4`. Use `--slow 0.6` for detail shots and `--x` to frame the subject (0 = left, 1 = right).
-4. Open 3 frames of the result to check the framing and text before sending it.
-5. Caption must include "Imagens: Rockstar Games" for trailer footage.
-6. **All text goes at the top** (headline + `--line2`). Never use `--bottom` unless someone in the clip is talking: people can't read two places at once, and the bottom is covered by Instagram's buttons and caption.
+**Reels from real footage (preferred):** if `footage/` has trailers, make Reels from them instead of slides.
+1. Use the shot map `footage/<trailer>-shots.json`. **Build a fast montage of 5 to 7 "characters" shots** (Jason, Lucia, faces, action). Never a clip with only cars, buildings or empty streets.
+2. Order: open on the strongest face shot, end on an emotional or explosive one. Total 6 to 9 seconds.
+3. Check `log.json` and don't repeat the same opening shot within 7 days (log `"source": "<file> cuts <starts>"`).
+4. `python3 make_clip.py footage/<file>.mp4 --cuts "start:dur:x,start:dur:x,..." --zoom 1.08 --tag "<kicker>" --top "<hook>" --line2 "<detail>" --badge "FALTAM N DIAS" --out posts/<date>-<slot>.mp4`
+   The layout puts all text on a black bar at the top and the footage below it, so text never covers faces.
+5. Open 4 to 6 frames of the result and check that every shot shows a person and the text fits.
+6. Caption must include "Imagens: Rockstar Games".
+7. Never use `--bottom` unless someone in the clip is talking.
+8. If a trailer has no shot map yet, make one first with `scenes.py` (look at every shot, list the ones with people and the subject's x position).
 
 **Reels are NOT auto-published.** The owner adds a trending Instagram song in the phone app, which the API can't do. So for a Reel:
 1. Build it with `make_reel.py` and push it to the repo (no music file needed).
