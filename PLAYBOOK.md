@@ -92,6 +92,16 @@ Follow research.md. Brazilian Portuguese, hype, casual ("mano", "família", "meu
 
 Formats that work best for big GTA 6 pages (see research.md): comparisons ("Qual é o GTA 6 e qual é a vida real?", GTA 5 vs GTA 6), a daily countdown series, and breaking-news carousels with a red "NOTÍCIA" tag and "ARRASTA PRO LADO".
 
+### Caption structure (from the instagram-agent skills)
+
+- **Only the first ~125 characters show** before "… mais". Write them for that.
+  - **Reels:** the video is already the hook, so line 1 is the context plus the ask ("Comenta aí qual você escolhe 👇"). Don't repeat the on-screen headline.
+  - **Images and carousels:** line 1 is the hook. Concrete, short, ends on a cliff, never a greeting, never starting with an emoji or hashtag.
+- **Search phrases:** put 1 or 2 phrases Brazilians actually type into the text naturally, e.g. "pré-download do GTA 6", "data de lançamento do GTA 6", "mapa do GTA 6", "trailer do GTA 6". Instagram search reads caption text; hashtags are just labels now.
+- **Hashtags:** 2 or 3 (Instagram allows at most 5 since Dec 2025). Never #viral, #fyp, #explorepage.
+- **One ask per post:** comment, save, or share. Pick one.
+- **Hooks:** for headlines, vary the formula using `.claude/skills/ig-reel/hooks.json` (26 formulas), adapted to Portuguese and GTA, e.g. "Ninguém te conta que…", "GTA 5 vs GTA 6: um deles não chega nem perto", "X coisas sobre Y. A número 4 ninguém percebeu", "Isso muda dia 19. Faça X antes". Don't use the same formula twice in a row.
+
 ### Humanizer pass (required, every caption)
 
 Before publishing, run the caption through the `humanizer` skill (in `.claude/skills/humanizer`) in embedded mode: return only the final caption. Rules for this page:

@@ -58,7 +58,12 @@ def wait_ready(cid, video):
 
 
 def caption_of(path):
-    return open(path, encoding="utf-8").read().strip()
+    """Read a caption and drop invisible format characters (zero-width spaces, etc.)
+    that AI-written text sometimes carries. Emoji and accents are kept."""
+    import unicodedata
+    text = open(path, encoding="utf-8").read().strip()
+    keep = ("\u200d", "\ufe0f")  # needed to build some emoji
+    return "".join(c for c in text if unicodedata.category(c) != "Cf" or c in keep)
 
 
 def main():
