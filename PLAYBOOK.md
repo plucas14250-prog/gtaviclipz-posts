@@ -92,6 +92,16 @@ Follow research.md. Brazilian Portuguese, hype, casual ("mano", "família", "meu
 
 Formats that work best for big GTA 6 pages (see research.md): comparisons ("Qual é o GTA 6 e qual é a vida real?", GTA 5 vs GTA 6), a daily countdown series, and breaking-news carousels with a red "NOTÍCIA" tag and "ARRASTA PRO LADO".
 
+### Humanizer pass (required, every caption)
+
+Before publishing, run the caption through the `humanizer` skill (in `.claude/skills/humanizer`) in embedded mode: return only the final caption. Rules for this page:
+- **Keep the page's voice:** Brazilian Portuguese, casual slang ("mano", "família", "PAROU TUDO"), the emojis, the ALL-CAPS hook on line 1, the question at the end, the source credit and the hashtags. Those are the style, not AI tells.
+- **Remove:** "não é só X, é Y" / "não é X, mas Y" contrasts, dramatic one-line closers that repeat the point, em dashes (—) and en dashes (–), forced lists of three, hype words with no fact behind them ("épico", "revolucionário", "incrível" stacked together), staged openers ("Bora falar sobre…", "Se liga nisso:" when it adds nothing), and chatbot phrases.
+- **Never add or change facts, numbers, dates or times.** The Brasília time rule still applies.
+- Keep it short: 1 to 4 lines plus hashtags.
+
+Also apply the same pass to the on-screen text (headline and second line) of Reels and carousels.
+
 ## 4. Publish
 
 1. Commit and push the image to `main` **first**. Instagram downloads it from GitHub.
