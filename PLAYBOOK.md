@@ -11,7 +11,7 @@ The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes 
 
 Launch week (2026-11-17 to 2026-11-21): the am slot also posts a Reel instead of an image.
 
-**Pre-approved posts:** if `posts/<today>-<slot>.jpg` (or `.mp4`) and `posts/<today>-<slot>.txt` already exist, the owner already approved them. Publish those as they are (the .txt is the caption) instead of making something new, then do the Story and log as usual.
+**Pre-approved posts:** if `posts/<today>-<slot>.jpg` (or `.mp4`, or a carousel `posts/<today>-<slot>-1.jpg`, `-2.jpg`, ...) and `posts/<today>-<slot>.txt` already exist, the owner already approved them. Publish those as they are (the .txt is the caption) instead of making something new, then do the Story and log as usual.
 
 If `research.md` exists in the repo, read it first and apply what it says works (hooks, formats, caption style, hashtags).
 
@@ -46,6 +46,17 @@ Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ T�
    - After launch, swap countdown for tips, "dias desde o lançamento" and player reaction posts.
 
 ## 2. Make the image in Canva
+
+**Canva AI credits:** `create-design` uses AI credits, and they can run out (it fails with "quota_exceeded"). When that happens, don't stop: **copy one of these template designs with `copy-design`, then change the text with `read-design` (open_transaction) + `edit-design` (replace_text, resize/format if the text wraps), commit, and export.** Editing and copying don't use AI credits. Check every page's thumbnail for wrapped or overlapping text before committing.
+
+| Template | Design ID | Use for |
+|---|---|---|
+| 6-slide carousel (cover + 5 numbered slides) | DAHaYlaqb0w | Carousels |
+| 4 vertical slides (hook, 2 lists, call to action) | DAHaXjj1jro | Reels and Stories |
+| 3 vertical slides | DAHaXrOksi0 | Short Reels |
+| Single portrait post (big headline at bottom) | DAHaYQC5TdY | Image posts |
+| Single portrait post (headline + date) | DAHaXYRb8gw | Image posts |
+
 
 1. Use the Canva `create-design` tool, format "Instagram Post (Portrait)". The brief should cover:
    - The exact Portuguese text: a big headline (at most ~8 words), an optional short line under it, and "@gtaviclipz_6" small at the bottom.
