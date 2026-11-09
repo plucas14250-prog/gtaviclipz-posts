@@ -3,7 +3,7 @@
 Example:
   python3 make_clip.py footage/trailer2.mp4 --start 41.2 --dur 8 \
       --tag "VOCÊ VIU?" --top "NINGUÉM PERCEBEU ESSE DETALHE" \
-      --bottom "o carro dá seta sozinho" --badge "FALTAM 9 DIAS" \
+      --line2 "o carro dá seta sozinho" --badge "FALTAM 9 DIAS" \
       --x 0.5 --zoom 1.15 --out posts/2026-11-10-pm.mp4
 
 Options:
@@ -13,7 +13,8 @@ Options:
   --slow            playback speed (0.5 = half speed, good for details)
   --tag             small red label above the headline (e.g. NOTÍCIA, VOCÊ VIU?)
   --top             big headline at the top
-  --bottom          subtitle box near the bottom
+  --line2           second line right under the headline (smaller, yellow)
+  --bottom          (avoid) subtitle box near the bottom; only for people talking
   --badge           pink pill in the top-right corner (e.g. a countdown)
   --keep-audio      keep the trailer's own audio (off by default: the owner adds
                     Instagram music, and trailer music can get the Reel muted)
@@ -34,8 +35,11 @@ PINK = (255, 40, 140)
 
 
 def wrap(d, text, font, max_w):
+    # Keep names like "GTA 6" on one line.
+    for name in ("GTA 6", "GTA VI", "GTA 5", "GTA V"):
+        text = text.replace(name, name.replace(" ", "\u00a0"))
     lines, cur = [], ""
-    for word in text.split():
+    for word in [w for w in text.split(" ") if w]:
         test = (cur + " " + word).strip()
         if d.textlength(test, font=font) <= max_w:
             cur = test
@@ -66,8 +70,8 @@ def overlay_png(args, path):
 
     # Dark gradient at the top so the headline is always readable.
     if args.top or args.tag:
-        for y in range(700):
-            a = int(200 * (1 - y / 700) ** 1.5)
+        for y in range(820):
+            a = int(210 * (1 - y / 820) ** 1.4)
             d.line([(0, y), (W, y)], fill=(0, 0, 0, a))
     y = 150
     if args.tag:
@@ -81,6 +85,12 @@ def overlay_png(args, path):
         for line in lines:
             d.text((60, y), line, font=f, fill="white", stroke_width=6, stroke_fill="black")
             y += int(f.size * 1.05)
+    if args.line2:
+        lf, lines = fit_font(d, args.line2.upper(), F_BOLD, 64, W - 120, 2)
+        y += 14
+        for line in lines:
+            d.text((60, y), line, font=lf, fill=(255, 214, 0), stroke_width=5, stroke_fill="black")
+            y += int(lf.size * 1.2)
 
     if args.badge:
         bf = ImageFont.truetype(F_BOLD, 40)
@@ -118,6 +128,7 @@ def main():
     p.add_argument("--slow", type=float, default=1.0)
     p.add_argument("--tag")
     p.add_argument("--top")
+    p.add_argument("--line2")
     p.add_argument("--bottom")
     p.add_argument("--badge")
     p.add_argument("--keep-audio", action="store_true")
