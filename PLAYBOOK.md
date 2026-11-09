@@ -26,8 +26,8 @@ Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ T�
 1. Use the shot map `footage/<trailer>-shots.json`. **Build a fast montage of 5 to 7 "characters" shots** (Jason, Lucia, faces, action). Never a clip with only cars, buildings or empty streets.
 2. Order: open on the strongest face shot, end on an emotional or explosive one. Total 6 to 9 seconds.
 3. Check `log.json` and don't repeat the same opening shot within 7 days (log `"source": "<file> cuts <starts>"`).
-4. `python3 make_clip.py footage/<file>.mp4 --cuts "start:dur:x,start:dur:x,..." --zoom 1.08 --tag "<kicker>" --top "<hook>" --line2 "<detail>" --badge "FALTAM N DIAS" --out posts/<date>-<slot>.mp4`
-   Layout: profile picture + name at the top, centered headline (normal sentence case, like a person talking, max ~10 words), a yellow second line, then the footage filling the bottom. Letterbox bars and emoji are removed automatically. Put emoji in the caption, not on screen.
+4. `python3 make_clip.py footage/<file>.mp4 --cuts "start:dur:x,start:dur:x,..." --zoom 1.08 --top "<hook>" --line2 "<detail>" --out posts/<date>-<slot>.mp4`
+   Layout: profile picture + name at the top, centered headline in Anton (max ~8 words), a yellow second line in Oswald (no red/pink tags), then the footage filling the bottom. Letterbox bars and emoji are removed automatically. Put emoji in the caption, not on screen.
 5. Open 4 to 6 frames of the result and check that every shot shows a person and the text fits.
 6. Caption must include "Imagens: Rockstar Games".
 7. Never use `--bottom` unless someone in the clip is talking.
@@ -47,7 +47,7 @@ Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ T�
 ## 1. Pick the content
 
 1. Read `log.json` to see past posts. Don't repeat a topic or headline from the last 10 posts.
-2. Find today's date in US Eastern time.
+2. **All dates and times are in Brasília time (America/Sao_Paulo, UTC−3, no daylight saving).** The audience is in Brazil. Get today's date with `TZ=America/Sao_Paulo date`. Countdowns ("FALTAM N DIAS") = 2026-11-19 minus today's Brasília date. Convert every time in news to Brasília before writing it (e.g. 00:00 GMT = 21:00 Brasília the day before), and say "hoje/amanhã" only if it's true in Brasília at the moment the post goes out (am ≈ 11:53, pm ≈ 19:53 Brasília). If a time can't be converted with certainty, leave the time out.
 3. Search the web for what's trending about GTA VI in the last 48 hours (news, viral moments, official Rockstar posts).
 4. Choose a format. Rotate so two posts in a row don't use the same one:
    - **countdown**: only before launch (GTA VI launches **2026-11-19**). Days left = launch date minus today.

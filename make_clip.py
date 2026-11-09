@@ -36,8 +36,10 @@ RED = (230, 20, 40)
 YELLOW = (255, 212, 40)
 BG = (10, 10, 12)
 BAR = 720  # height of the top area (profile + text); the video fills the rest
-F_SEMI = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
-F_REG = "/usr/share/fonts/opentype/inter/Inter-Medium.otf"
+_FONTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "fonts")
+F_HEAD = os.path.join(_FONTS, "Anton.woff")            # big headline, same style as the Canva designs
+F_SEMI = os.path.join(_FONTS, "Oswald-SemiBold.woff")  # second line and page name
+F_REG = os.path.join(_FONTS, "Oswald-Regular.woff")    # handle and credit
 NAME = "GTA VI CLIPZ"
 HANDLE = "@gtaviclipz_6"
 AVATAR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "avatar.jpg")
@@ -109,8 +111,8 @@ def overlay_png(args, path):
 
     # Profile row: avatar with a gradient ring, name and handle, centered.
     av, ring = 112, 6
-    name_f = ImageFont.truetype(F_BOLD, 42)
-    handle_f = ImageFont.truetype(F_REG, 32)
+    name_f = ImageFont.truetype(F_SEMI, 44)
+    handle_f = ImageFont.truetype(F_REG, 34)
     text_w = max(d.textlength(NAME, font=name_f), d.textlength(HANDLE, font=handle_f))
     row_w = av + 2 * ring + 28 + text_w
     x0, y0 = int((W - row_w) / 2), 96
@@ -127,25 +129,25 @@ def overlay_png(args, path):
     if os.path.exists(AVATAR):
         img.alpha_composite(avatar_circle(AVATAR, av), (x0 + ring, y0 + ring))
     tx = x0 + av + 2 * ring + 28
-    d.text((tx, y0 + 22), NAME, font=name_f, fill="white")
-    d.text((tx, y0 + 74), HANDLE, font=handle_f, fill=(150, 150, 150))
+    d.text((tx, y0 + 14), NAME, font=name_f, fill="white")
+    d.text((tx, y0 + 70), HANDLE, font=handle_f, fill=(150, 150, 150))
     top_of_text = y0 + av + 2 * ring + 40
 
     # Build the text block, then center it in the space left above the video.
     block = []
-    pills = [(t.upper(), c) for t, c in ((args.tag, RED), (args.badge, PINK)) if t]
+    pills = []  # tags/badges removed: keep the top clean
     pill_f = ImageFont.truetype(F_BOLD, 32)
     head_f, head_lines = (None, [])
     if args.top:
-        head_f, head_lines = fit_font(d, args.top, F_SEMI, 68, W - 160, 3)
+        head_f, head_lines = fit_font(d, args.top.upper(), F_HEAD, 96, W - 140, 3)
     l2_f, l2_lines = (None, [])
     if args.line2:
-        l2_f, l2_lines = fit_font(d, args.line2, F_SEMI, 44, W - 180, 2)
+        l2_f, l2_lines = fit_font(d, args.line2.upper(), F_SEMI, 48, W - 160, 2)
     h = 0
     if pills:
         h += 58 + 28
     if head_lines:
-        h += int(head_f.size * 1.22) * len(head_lines)
+        h += int(head_f.size * 1.12) * len(head_lines)
     if l2_lines:
         h += 18 + int(l2_f.size * 1.3) * len(l2_lines)
     y = top_of_text + max(0, (BAR - 50 - top_of_text - h) // 2)
@@ -162,7 +164,7 @@ def overlay_png(args, path):
     for line in head_lines:
         lw = d.textlength(line, font=head_f)
         d.text(((W - lw) / 2, y), line, font=head_f, fill="white")
-        y += int(head_f.size * 1.22)
+        y += int(head_f.size * 1.12)
     if l2_lines:
         y += 18
         for line in l2_lines:
@@ -181,7 +183,7 @@ def overlay_png(args, path):
     for i in range(160):
         a = int(150 * (i / 160) ** 2)
         d.line([(0, H - 160 + i), (W, H - 160 + i)], fill=(0, 0, 0, a))
-    cf = ImageFont.truetype(F_REG, 28)
+    cf = ImageFont.truetype(F_REG, 30)
     credit = "Imagens: Rockstar Games"
     d.text(((W - d.textlength(credit, font=cf)) / 2, H - 72), credit, font=cf, fill=(220, 220, 220, 230))
 
