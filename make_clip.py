@@ -22,6 +22,7 @@ Options:
 Every clip gets "Imagens: Rockstar Games" and @gtaviclipz_6 in small text.
 """
 import argparse
+import re
 import os
 import subprocess
 import tempfile
@@ -32,8 +33,34 @@ W, H = 1080, 1920
 F_BLACK = "/usr/share/fonts/opentype/inter/InterDisplay-Black.otf"
 F_BOLD = "/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf"
 RED = (230, 20, 40)
-BAR = 640  # height of the black text bar at the top
+YELLOW = (255, 212, 40)
+BG = (10, 10, 12)
+BAR = 720  # height of the top area (profile + text); the video fills the rest
+F_SEMI = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
+F_REG = "/usr/share/fonts/opentype/inter/Inter-Medium.otf"
+NAME = "GTA VI CLIPZ"
+HANDLE = "@gtaviclipz_6"
+AVATAR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "avatar.jpg")
 PINK = (255, 40, 140)
+
+
+def clean(text):
+    """Drop emoji and other symbols the font can't draw (they'd show as boxes)."""
+    if not text:
+        return text
+    out = "".join(ch for ch in text if ord(ch) < 0x2190 or 0x2190 <= ord(ch) <= 0x21FF or ch in "•–—…")
+    return " ".join(out.split())
+
+
+def detect_bars(src):
+    """Find black letterbox bars (e.g. cinema-style trailers) so they can be cropped off."""
+    proc = subprocess.run(["ffmpeg", "-ss", "15", "-i", src, "-t", "30", "-vf", "cropdetect=24:2:0",
+                           "-f", "null", "-"], capture_output=True, text=True)
+    found = re.findall(r"crop=(\d+):(\d+):(\d+):(\d+)", proc.stderr)
+    if not found:
+        return None
+    w, h, x, y = max(set(found), key=found.count)
+    return f"crop={w}:{h}:{x}:{y},"
 
 
 def wrap(d, text, font, max_w):
@@ -66,57 +93,107 @@ def fit_font(d, text, path, start, max_w, max_lines):
     return f, wrap(d, text, f, max_w)
 
 
+def avatar_circle(path, size):
+    im = Image.open(path).convert("RGB").resize((size, size), Image.LANCZOS)
+    mask = Image.new("L", (size * 4, size * 4), 0)
+    ImageDraw.Draw(mask).ellipse([0, 0, size * 4, size * 4], fill=255)
+    out = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    out.paste(im, (0, 0), mask.resize((size, size), Image.LANCZOS))
+    return out
+
+
 def overlay_png(args, path):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    d.rectangle([0, 0, W, BAR], fill=(0, 0, 0, 255))
-    # soft fade from the bar into the footage
-    for i in range(60):
-        d.line([(0, BAR + i), (W, BAR + i)], fill=(0, 0, 0, int(255 * (1 - i / 60))))
+    d.rectangle([0, 0, W, BAR], fill=BG)
 
-    y = 110
-    if args.tag:
-        tf = ImageFont.truetype(F_BOLD, 46)
-        tw = d.textlength(args.tag.upper(), font=tf)
-        d.rounded_rectangle([60, y, 60 + tw + 44, y + 72], radius=10, fill=RED)
-        d.text((82, y + 9), args.tag.upper(), font=tf, fill="white")
-        y += 100
+    # Profile row: avatar with a gradient ring, name and handle, centered.
+    av, ring = 112, 6
+    name_f = ImageFont.truetype(F_BOLD, 42)
+    handle_f = ImageFont.truetype(F_REG, 32)
+    text_w = max(d.textlength(NAME, font=name_f), d.textlength(HANDLE, font=handle_f))
+    row_w = av + 2 * ring + 28 + text_w
+    x0, y0 = int((W - row_w) / 2), 96
+    grad = Image.new("RGBA", (av + 2 * ring, av + 2 * ring))
+    gd = ImageDraw.Draw(grad)
+    for i in range(av + 2 * ring):
+        t = i / (av + 2 * ring)
+        col = tuple(int(PINK[k] * (1 - t) + (255, 170, 0)[k] * t) for k in range(3))
+        gd.line([(i, 0), (i, av + 2 * ring)], fill=col + (255,))
+    ring_mask = Image.new("L", grad.size, 0)
+    ImageDraw.Draw(ring_mask).ellipse([0, 0, grad.size[0] - 1, grad.size[1] - 1], fill=255)
+    img.paste(grad, (x0, y0), ring_mask)
+    d.ellipse([x0 + ring - 3, y0 + ring - 3, x0 + ring + av + 2, y0 + ring + av + 2], fill=BG)
+    if os.path.exists(AVATAR):
+        img.alpha_composite(avatar_circle(AVATAR, av), (x0 + ring, y0 + ring))
+    tx = x0 + av + 2 * ring + 28
+    d.text((tx, y0 + 22), NAME, font=name_f, fill="white")
+    d.text((tx, y0 + 74), HANDLE, font=handle_f, fill=(150, 150, 150))
+    top_of_text = y0 + av + 2 * ring + 40
+
+    # Build the text block, then center it in the space left above the video.
+    block = []
+    pills = [(t.upper(), c) for t, c in ((args.tag, RED), (args.badge, PINK)) if t]
+    pill_f = ImageFont.truetype(F_BOLD, 32)
+    head_f, head_lines = (None, [])
     if args.top:
-        f, lines = fit_font(d, args.top.upper(), F_BLACK, 112, W - 120, 3)
-        for line in lines:
-            d.text((60, y), line, font=f, fill="white", stroke_width=6, stroke_fill="black")
-            y += int(f.size * 1.05)
+        head_f, head_lines = fit_font(d, args.top, F_SEMI, 68, W - 160, 3)
+    l2_f, l2_lines = (None, [])
     if args.line2:
-        lf, lines = fit_font(d, args.line2.upper(), F_BOLD, 64, W - 120, 2)
-        y += 14
-        for line in lines:
-            d.text((60, y), line, font=lf, fill=(255, 214, 0), stroke_width=5, stroke_fill="black")
-            y += int(lf.size * 1.2)
+        l2_f, l2_lines = fit_font(d, args.line2, F_SEMI, 44, W - 180, 2)
+    h = 0
+    if pills:
+        h += 58 + 28
+    if head_lines:
+        h += int(head_f.size * 1.22) * len(head_lines)
+    if l2_lines:
+        h += 18 + int(l2_f.size * 1.3) * len(l2_lines)
+    y = top_of_text + max(0, (BAR - 50 - top_of_text - h) // 2)
 
-    if args.badge:
-        bf = ImageFont.truetype(F_BOLD, 40)
-        bw = d.textlength(args.badge.upper(), font=bf)
-        x0 = W - 60 - bw - 48
-        d.rounded_rectangle([x0, 110, W - 60, 178], radius=34, fill=PINK)
-        d.text((x0 + 24, 122), args.badge.upper(), font=bf, fill="white")
-    args.bar_h = BAR
+    if pills:
+        gap = 16
+        widths = [d.textlength(t, font=pill_f) + 44 for t, _ in pills]
+        px = (W - sum(widths) - gap * (len(pills) - 1)) / 2
+        for (t, c), w in zip(pills, widths):
+            d.rounded_rectangle([px, y, px + w, y + 58], radius=29, fill=c)
+            d.text((px + 22, y + 11), t, font=pill_f, fill="white")
+            px += w + gap
+        y += 58 + 28
+    for line in head_lines:
+        lw = d.textlength(line, font=head_f)
+        d.text(((W - lw) / 2, y), line, font=head_f, fill="white")
+        y += int(head_f.size * 1.22)
+    if l2_lines:
+        y += 18
+        for line in l2_lines:
+            lw = d.textlength(line, font=l2_f)
+            d.text(((W - lw) / 2, y), line, font=l2_f, fill=YELLOW)
+            y += int(l2_f.size * 1.3)
+
+    # Rounded top corners on the video, and a soft fade at the bottom for the credit.
+    r = 44
+    corner = Image.new("L", (r * 4, r * 4), 255)
+    ImageDraw.Draw(corner).pieslice([0, 0, r * 8, r * 8], 180, 270, fill=0)
+    corner = corner.resize((r, r), Image.LANCZOS)
+    bgc = Image.new("RGBA", (r, r), BG + (255,))
+    img.paste(bgc, (0, BAR), corner)
+    img.paste(bgc, (W - r, BAR), corner.transpose(Image.FLIP_LEFT_RIGHT))
+    for i in range(160):
+        a = int(150 * (i / 160) ** 2)
+        d.line([(0, H - 160 + i), (W, H - 160 + i)], fill=(0, 0, 0, a))
+    cf = ImageFont.truetype(F_REG, 28)
+    credit = "Imagens: Rockstar Games"
+    d.text(((W - d.textlength(credit, font=cf)) / 2, H - 72), credit, font=cf, fill=(220, 220, 220, 230))
 
     if args.bottom:
-        sf, lines = fit_font(d, args.bottom.upper(), F_BOLD, 58, W - 200, 2)
+        sf, lines = fit_font(d, args.bottom.upper(), F_BOLD, 54, W - 200, 2)
         lh = int(sf.size * 1.25)
         box_h = lh * len(lines) + 50
-        top = 1500 - box_h // 2
+        top = H - 420
         d.rounded_rectangle([60, top, W - 60, top + box_h], radius=24, fill=(0, 0, 0, 190))
         for i, line in enumerate(lines):
             lw = d.textlength(line, font=sf)
             d.text(((W - lw) / 2, top + 25 + i * lh), line, font=sf, fill="white")
-
-    small = ImageFont.truetype(F_BOLD, 30)
-    d.text((60, H - 110), "Imagens: Rockstar Games", font=small, fill=(255, 255, 255, 200),
-           stroke_width=2, stroke_fill=(0, 0, 0, 160))
-    hw = d.textlength("@gtaviclipz_6", font=small)
-    d.text((W - 60 - hw, H - 110), "@gtaviclipz_6", font=small, fill="white",
-           stroke_width=2, stroke_fill=(0, 0, 0, 160))
     img.save(path)
 
 
@@ -138,6 +215,9 @@ def main():
     p.add_argument("--out", required=True)
     args = p.parse_args()
 
+    for k in ("tag", "top", "line2", "bottom", "badge"):
+        setattr(args, k, clean(getattr(args, k)))
+    bars = detect_bars(args.src) or ""
     tmp = tempfile.mkdtemp()
     ov = os.path.join(tmp, "overlay.png")
     overlay_png(args, ov)
@@ -158,10 +238,10 @@ def main():
         od = du / args.slow
         xx = min(max(xx, 0.0), 1.0)
         chains.append(
-            f"[0:v]trim=start={st}:duration={du},setpts=(PTS-STARTPTS)/{args.slow},"
+            f"[0:v]trim=start={st}:duration={du},setpts=(PTS-STARTPTS)/{args.slow},{bars}"
             f"scale=w=-2:h='trunc({H - BAR}*(1+({z}-1)*t/{od})/2)*2':eval=frame,"
             f"crop={W}:{H - BAR}:'(iw-{W})*{xx}':'(ih-{H - BAR})/2',"
-            f"pad={W}:{H}:0:{BAR}:black,fps=30,format=yuv420p,setsar=1[s{i}]")
+            f"pad={W}:{H}:0:{BAR}:0x0A0A0C,fps=30,format=yuv420p,setsar=1[s{i}]")
         labels.append(f"[s{i}]")
         total += od
     vf = ";".join(chains) + ";" + "".join(labels) + f"concat=n={len(segs)}:v=1:a=0[v];[v][1:v]overlay=0:0[out]"

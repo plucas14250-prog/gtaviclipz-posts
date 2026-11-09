@@ -27,7 +27,7 @@ Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ T�
 2. Order: open on the strongest face shot, end on an emotional or explosive one. Total 6 to 9 seconds.
 3. Check `log.json` and don't repeat the same opening shot within 7 days (log `"source": "<file> cuts <starts>"`).
 4. `python3 make_clip.py footage/<file>.mp4 --cuts "start:dur:x,start:dur:x,..." --zoom 1.08 --tag "<kicker>" --top "<hook>" --line2 "<detail>" --badge "FALTAM N DIAS" --out posts/<date>-<slot>.mp4`
-   The layout puts all text on a black bar at the top and the footage below it, so text never covers faces.
+   Layout: profile picture + name at the top, centered headline (normal sentence case, like a person talking, max ~10 words), a yellow second line, then the footage filling the bottom. Letterbox bars and emoji are removed automatically. Put emoji in the caption, not on screen.
 5. Open 4 to 6 frames of the result and check that every shot shows a person and the text fits.
 6. Caption must include "Imagens: Rockstar Games".
 7. Never use `--bottom` unless someone in the clip is talking.
