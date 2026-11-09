@@ -46,5 +46,14 @@
   "headline": "A POLÍCIA DO GTA 6 VAI LEMBRAR DA SUA ROUPA (9:16, no crop)",
   "image": "posts/2026-11-09-am-story.jpg",
   "permalink": "see Instagram"
+ },
+ {
+  "date": "2026-11-09",
+  "slot": "pm",
+  "format": "reel-manual",
+  "headline": "HOJE VOCÊ JÁ PODE BAIXAR O GTA 6 (pre-download, trailer montage)",
+  "image": "posts/2026-11-09-pm.mp4",
+  "source": "footage/launch-trailer.mp4 cuts 11.3,25.8,39.9,72.15,71.45,66.5",
+  "permalink": "sent to owner"
  }
 ]
