@@ -11,6 +11,8 @@ The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes 
 
 Launch week (2026-11-17 to 2026-11-21): the am slot also posts a Reel instead of an image.
 
+**Pre-approved posts:** if `posts/<today>-<slot>.jpg` (or `.mp4`) and `posts/<today>-<slot>.txt` already exist, the owner already approved them. Publish those as they are (the .txt is the caption) instead of making something new, then do the Story and log as usual.
+
 If `research.md` exists in the repo, read it first and apply what it says works (hooks, formats, caption style, hashtags).
 
 **Reels:** make 3 to 4 vertical slides in Canva (format "Instagram Story", one idea per slide: hook on slide 1, payoff in the middle, "segue pra não perder nada" call to action on the last). Export every page as PNG (`export-design`, type png), download them, then:
