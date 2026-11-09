@@ -42,7 +42,7 @@ Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ T�
 
 **Carousels:** make a multi-page Canva design (format "Instagram Post (Portrait)"), export each page as JPG, run `fit.py` on each, then `python3 publish.py --carousel caption.txt p1.jpg p2.jpg ...`.
 
-**Stories:** after the feed post is live, publish the Story with `python3 publish.py --story <file>` (a 9:16 slide, or the feed image). Stories have no caption. Push the file before publishing, like any other media.
+**Stories:** after the feed post is live, publish the Story with `python3 publish.py --story <file>`. **Stories must be 9:16.** A 4:5 or square image gets its sides cut by Instagram, so always run `python3 make_story.py <post image> posts/<date>-<slot>-story.jpg` first (it fits the whole artwork on a blurred background). 9:16 slides from a Reel can be used as they are. (a 9:16 slide, or the feed image). Stories have no caption. Push the file before publishing, like any other media.
 
 ## 1. Pick the content
 
