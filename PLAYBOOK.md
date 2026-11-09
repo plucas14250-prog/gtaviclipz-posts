@@ -1,17 +1,17 @@
 # Playbook: one Instagram post for @gtaviclipz_6
 
-The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes exactly **one** feed post plus **one** Story. Follow these steps in order.
+The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes exactly **one** feed post. **No API Stories.** The owner reshares each post to their Story in the app (the API can't share a post to a Story, and separate Story art is not wanted). Follow these steps in order.
 
 ## 0. What to post in this run
 
-| Slot (US Eastern) | Feed post | Story |
-|---|---|---|
-| **am** (9:53, ~12h Brasília) | Image post, or a carousel (3 to 5 slides) about every other day | The feed image |
-| **pm** (17:53, ~20h Brasília) | **Reel** made with `make_reel.py` | A Story-sized slide from the Reel |
+| Slot (US Eastern) | Feed post |
+|---|---|
+| **am** (9:53, ~12h Brasília) | Image post, or a carousel (3 to 5 slides) about every other day |
+| **pm** (17:53, ~20h Brasília) | **Reel** made with `make_reel.py` |
 
 Launch week (2026-11-17 to 2026-11-21): the am slot also posts a Reel instead of an image.
 
-**Pre-approved posts:** if `posts/<today>-<slot>.jpg` (or `.mp4`, or a carousel `posts/<today>-<slot>-1.jpg`, `-2.jpg`, ...) and `posts/<today>-<slot>.txt` already exist, the owner already approved them. Publish those as they are (the .txt is the caption) instead of making something new, then do the Story and log as usual.
+**Pre-approved posts:** if `posts/<today>-<slot>.jpg` (or `.mp4`, or a carousel `posts/<today>-<slot>-1.jpg`, `-2.jpg`, ...) and `posts/<today>-<slot>.txt` already exist, the owner already approved them. Publish those as they are (the .txt is the caption) instead of making something new, then send the Story reshare reminder and log as usual.
 
 If `research.md` exists in the repo, read it first and apply what it says works (hooks, formats, caption style, hashtags).
 
@@ -37,12 +37,12 @@ Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ T�
 1. Build it with `make_reel.py` and push it to the repo (no music file needed).
 2. Do **not** run `publish.py --reel`.
 3. Send the owner the video with `SendUserFile` (status "proactive"), and in your message give: the caption ready to copy, and 2 to 3 suggested song vibes that fit (e.g. "funk/phonk agressivo", "synthwave anos 80"). Tell them to pick whatever sound is trending in the Reels audio tab.
-4. Still publish the Story automatically (a slide from the Reel).
+4. Remind the owner to turn on "Compartilhar no story" when posting the Reel.
 5. Log it with `"format": "reel-manual"` and `"permalink": "sent to owner"`.
 
 **Carousels:** make a multi-page Canva design (format "Instagram Post (Portrait)"), export each page as JPG, run `fit.py` on each, then `python3 publish.py --carousel caption.txt p1.jpg p2.jpg ...`.
 
-**Stories:** after the feed post is live, publish the Story with `python3 publish.py --story <file>`. **Stories must be 9:16.** A 4:5 or square image gets its sides cut by Instagram, so always run `python3 make_story.py <post image> posts/<date>-<slot>-story.jpg` first (it fits the whole artwork on a blurred background). 9:16 slides from a Reel can be used as they are. (a 9:16 slide, or the feed image). Stories have no caption. Push the file before publishing, like any other media.
+**Stories:** do NOT publish Stories with `publish.py --story`. After the feed post is live, send the owner (SendUserFile is not needed, a message is enough) the post link and this reminder: "Compartilha no story: abre o post → ✈️ → Adicionar ao story". For Reels, remind them to tap "Compartilhar também no story" when they post.
 
 ## 1. Pick the content
 
