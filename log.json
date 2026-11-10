@@ -59,10 +59,20 @@
  {
   "date": "2026-11-10",
   "slot": "am",
-  "format": "image",
+  "format": "image-deleted",
   "headline": "FALTAM 9 DIAS (trailer frame: Jason e Lucia no carro vermelho)",
   "image": "posts/2026-11-10-am.jpg",
   "source": "footage/launch-trailer.mp4 @40.6s",
-  "permalink": "https://www.instagram.com/p/DfkK12FkmN1/"
+  "permalink": "https://www.instagram.com/p/DfkK12FkmN1/",
+  "note": "owner deleted version A and chose B"
+ },
+ {
+  "date": "2026-11-10",
+  "slot": "am",
+  "format": "image",
+  "headline": "FALTAM 9 DIAS (trailer frame: Jason e Lucia abraçados no pôr do sol)",
+  "image": "posts/2026-11-10-am-B.jpg",
+  "source": "footage/launch-trailer.mp4 @66.9s",
+  "permalink": "https://www.instagram.com/p/DfkO5sxF-7w/"
  }
 ]
