@@ -322,6 +322,19 @@ Reach without a profile that converts is wasted, so do the checklist before laun
 
 `instagram/voice-template.md` is still the blank template. The owner's own captions ("Po Rockstar, não vacila 😭", "Caiu a ficha que falta apenas 1 mês") are the best-performing voice we have and should be the samples it is filled from.
 
+### 7.7 Update, Nov 10: Account Status is green
+
+The owner checked the app: "Recommendation eligibility" shows a green check. So the account is **not** excluded from recommendations, and the account-level part of 7.2 is ruled out.
+
+What that leaves:
+- Eligible means Instagram may recommend our posts, not that it does. Each post still has to earn it on watch time and sends in its first small test audience.
+- The per-post rule still applies: a near-identical copy of a clip is replaced in recommendations by the original. Bare trailer cuts compete with @rockstargames and every other page using the same shots.
+- So the problem is now most likely the posts themselves (hook, retention, nothing worth sending), not a penalty. The changes in 7.4 still stand, for that reason rather than to lift a flag. Step 1 of 7.4 is done.
+
+To tell which it is, we need per-Reel insights from the app for 3 or 4 recent Reels: views, share of views from non-followers, average watch time, the retention/skip figure for the first seconds, and sends.
+- Views near follower count and almost all from followers: the Reel never left the test audience. Fix the first 2 seconds and the idea.
+- Many non-follower views but few follows: the content travels and the profile does not convert. Do 7.6 first.
+
 ### 7.5 Confidence
 
 The originality rule is well reported by several outlets, but I have not seen our Account Status and cannot confirm we are flagged. Treat 7.2 as the leading hypothesis until step 1 is checked. The "what breaks out" list is drawn from big accounts plus general ranking statements, not from a measured sample of small GTA pages. That sample still needs a browser session where Instagram is reachable (the `ig-viral` swipe file).
