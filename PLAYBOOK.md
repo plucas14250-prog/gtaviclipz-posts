@@ -16,7 +16,7 @@ Launch week (2026-11-17 to 2026-11-21): the am slot also posts a Reel instead of
 If `research.md` exists in the repo, read it first and apply what it says works (hooks, formats, caption style, hashtags).
 
 **Reels:** see the Reel rules below (real footage only, no slides, no zoom).
-Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ TÁ PRONTO?"). If there are tracks in `music/`, `make_reel.py` adds one automatically.
+The Reel headline must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ TÁ PRONTO?").
 
 **Reel rules from the owner (always):**
 - **No slideshows.** Never build a Reel from still slides or images (`make_reel.py` is retired). Reels are real moving footage only: trailer clips, the owner's own recordings, gameplay.
@@ -24,7 +24,7 @@ Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ T�
 - Edit like a real video: keep continuous stretches that have movement (screens changing, a countdown ticking, characters moving), cut dead parts, and fast-forward boring stretches with the per-cut speed (`start:dur:x:speed`, e.g. 1.8). Reframe the same moment with a second cut only when the subject moves out of frame.
 - For screen recordings, crop on the part with readable text (`--srccrop` to remove black bars first).
 
-**Reels from real footage (required):** if `footage/` has trailers, make Reels from them instead of slides.
+**Reels from real footage (required):** if `footage/` has trailers, make Reels from them.
 1. Use the shot map `footage/<trailer>-shots.json`. **Build a fast montage of 5 to 7 "characters" shots** (Jason, Lucia, faces, action). Never a clip with only cars, buildings or empty streets.
 2. Order: open on the strongest face shot, end on an emotional or explosive one. Total 6 to 9 seconds.
 3. Check `log.json` and don't repeat the same opening shot within 7 days (log `"source": "<file> cuts <starts>"`).
@@ -65,8 +65,8 @@ Slide 1 must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ T�
 | Template | Design ID | Use for |
 |---|---|---|
 | 6-slide carousel (cover + 5 numbered slides) | DAHaYlaqb0w | Carousels |
-| 4 vertical slides (hook, 2 lists, call to action) | DAHaXjj1jro | Reels and Stories |
-| 3 vertical slides | DAHaXrOksi0 | Short Reels |
+| 4 vertical slides (hook, 2 lists, call to action) | DAHaXjj1jro | Not for Reels (no slideshows) |
+| 3 vertical slides | DAHaXrOksi0 | Not for Reels (no slideshows) |
 | Single portrait post (big headline at bottom) | DAHaYQC5TdY | Image posts |
 | Single portrait post (headline + date) | DAHaXYRb8gw | Image posts |
 
