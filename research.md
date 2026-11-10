@@ -259,3 +259,60 @@ Always **3 lowercase tags: #gta #gta6 #rockstar** (or #rockstargames). Never mor
 ---
 
 *Limitations: like counts were hidden on some houseofgta6 posts, so their numbers come from the ~46 posts where they show. Engagement counts were read on Nov 8, 2026 and keep rising on recent posts.*
+
+---
+
+## 7. Why we are not getting reach, and what small accounts do instead (Nov 10, 2026)
+
+**Method and limits.** Instagram, YouTube and TikTok pages are blocked from the automation sandbox, and our API app has no insights or business-discovery permission. So this section rests on (a) our own 28 posts via the Graph API (likes and comments only, no views), (b) press coverage of Instagram's ranking rules found by web search, and (c) sections 1 to 6 above. No new competitor reels were read. Article bodies could not be opened, so rule details come from search summaries of TechCrunch, Social Media Today and others, not from Instagram's own page.
+
+### 7.1 Our numbers
+
+- 196 followers, 28 posts. Likes per post range from 1 to 22.
+- The 20 posts before Nov 8 (owner-made): median 8 likes. The 8 posts since Nov 8 (templated: trailer cuts + headline): median 2.5 likes. The newer posts have had less time to collect likes, so the gap is overstated, but nothing templated has beaten the owner's casual posts.
+- Best posts: an Oct 30 carousel (22 likes), "Po Rockstar, não vacila 😭" (18), "Caiu a ficha que falta apenas 1 mês" (17). All three are one-line, joke-or-feeling posts. None is a news headline.
+- With no views data we cannot tell a hook problem from a distribution problem. Getting insights is step one (7.4).
+
+### 7.2 The most likely cause: Instagram does not recommend reposted footage
+
+Since April 30, 2026 Instagram removes accounts that mostly repost other people's content from recommendations (Reels tab, Explore, suggested posts). Followers still see the posts. With 196 followers, recommendations are the only route to growth, so this alone would explain flat reach.
+
+As reported:
+- Counts as original: something you made yourself, or third-party material "materially edited": turned into a meme, narrated with a new voiceover, remixed to express a reaction, a parody compilation.
+- Does **not** count: a watermark, logo, border, subtitles, a credit in the caption, a speed change, a screenshot.
+- Identical or near-identical copies get replaced in recommendations by the original post.
+- Eligibility comes back when most posts in a rolling 30 days are original. The status is shown in the app under Account Status.
+
+Our pm Reel recipe (Rockstar trailer cuts, per-cut speed changes, a headline, our avatar on top, "Imagens: Rockstar Games") is close to a list of the edits that do not count. Thousands of pages are cutting the same 90 seconds of trailer, and @rockstargames posted it first.
+
+This also explains section 1 to 6 better than "comparisons win": every top post there has something of the poster's own in it. The turn-signal Reel points at a detail. The 110/111/210 GB graphic is their own design. The pre-load Reel is their own PS5 screen recording. Davy Jones is on camera. Countdown reels over plain trailer footage only work for pages that already have 270K followers to feed.
+
+### 7.3 What breaks out from a small account
+
+- **Sends.** Mosseri has named watch time, likes per reach and sends per reach as the top signals, with sends mattering most for reaching non-followers. A post gets sent when it says something the viewer wants a specific friend to see: "eu e você dia 19", "manda pro amigo que vai faltar no trabalho".
+- **Being first with something visible.** Screen recordings of a real thing (PS Store page, pre-load bar, the install size) carried the biggest reels in section 2.
+- **One relatable line in PT-BR.** Davy Jones's formula, and also our own top three posts.
+- **AI fake "gameplay" is getting millions of views. Do not copy it.** Rockstar is issuing takedowns, the playbook forbids misleading claims, and those accounts are being reported.
+- Small accounts get proportionally more reach than big ones (Social Insider 2026: 9.8% reach rate at 1K to 5K vs 7.1% at 10K to 50K). Size is not what is holding us back.
+
+### 7.4 Proposed changes (not applied to PLAYBOOK.md yet; owner decides)
+
+1. **Check Account Status today** (app: Settings → Account Status → "Recommendation eligibility" / "O que não pode ser recomendado"). If it says not eligible, nothing else matters until the next 30 days are mostly original.
+2. **Give the API app the `instagram_manage_insights` permission** so `stats.py` can read views, reach, shares and average watch time. Until then we are steering by likes.
+3. **Stop the bare trailer-montage Reel.** Trailer shots may appear only inside something materially edited:
+   - *Detail breakdown:* freeze the frame, circle or arrow on the detail, 2 to 3 lines of our own explanation on screen, or the owner's voice. "Ninguém percebeu isso no trailer."
+   - *Meme:* one trailer shot as the reaction, with a first-person situation on top. "Eu chegando no trabalho dia 20 sem dormir."
+   - *Our own comparison graphic:* GTA 5 vs GTA 6 shot, real Miami vs Vice City, with our layout and our verdict.
+4. **Owner-recorded footage becomes the main Reel source.** `footage/buying-gta6.mp4` is the right kind. Next: the pre-load progress bar, storage screen showing the GB, the countdown timer on the console, a hand on the controller at 00:00.
+5. **Launch day is the one real opening.** From Nov 19 (00:00 on PS5 in Brasília per our own Nov 9 caption), self-recorded gameplay is fully original and everyone is searching for it. Plan 3 to 5 Reels a day for the first 72 hours: first minutes, first car, first police chase, small details, funny NPC moments, bugs. Record in short clips with the PS5 capture button. This needs the owner playing and uploading; the automation edits and captions.
+6. **Voice.** A 5 to 10 second voice note from the owner over a clip counts as a new voiceover and is the cheapest route to "original".
+7. **One ask per post, and make it a send** on meme and relatable posts ("manda pra quem vai jogar com você"). Keep the comment question for polls.
+8. **Image slot:** fewer bare countdown frames from the trailer. More own-design data graphics and comparisons (the GB graphic in section 1 had 1.2M reposts).
+9. **Collabs.** Ask 2 or 3 Brazilian GTA meme pages in the 5K to 50K range for a collab post. Co-authored Reels reach both audiences; it is most of Davy Jones's reach.
+10. **Use Trial Reels** (shown to non-followers first) once the account has access, to test hooks without spending the grid.
+
+### 7.5 Confidence
+
+The originality rule is well reported by several outlets, but I have not seen our Account Status and cannot confirm we are flagged. Treat 7.2 as the leading hypothesis until step 1 is checked. The "what breaks out" list is drawn from big accounts plus general ranking statements, not from a measured sample of small GTA pages. That sample still needs a browser session where Instagram is reachable (the `ig-viral` swipe file).
+
+Sources: [TechCrunch, Apr 30 2026](https://techcrunch.com/2026/04/30/instagram-restricts-reach-of-content-aggregators-in-new-crackdown/) · [Social Media Today](https://www.socialmediatoday.com/news/instagram-algorithm-prioritize-original-emerging-creators/714777/) · [Planoly](https://planoly.com/blog/instagram-updates-its-original-content-policy) · [MediaPost](https://mediapost.com/publications/article/414773/instagram-algorithm-update-discourages-reposted-co.html) · [Hootsuite on ranking signals](https://blog.hootsuite.com/instagram-algorithm/) · [Socialinsider Reels statistics](https://socialinsider.io/blog/instagram-reels-statistics/) · [games.gg on AI GTA 6 clips](https://games.gg/news/ai-gta6-slop-millions-views-social/) · [Softonic](https://en.softonic.com/articles/gta-6-fake-gameplay-clips-go-viral-millions-of-views-ahead-of-rockstars-november-launch) · [Metricool on scheduling and reach](https://metricool.com/does-scheduling-social-media-posts-affect-reach/)
