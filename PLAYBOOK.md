@@ -11,6 +11,11 @@ The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes 
 
 Launch week (2026-11-17 to 2026-11-21): the am slot also posts a Reel instead of an image.
 
+**Approval flow (owner's request):** each post is prepared about 3 hours early by a separate "prepare" run, saved as `posts/<date>-<slot>-preview.*` (image `.jpg`, carousel `-preview-1.jpg`…, or Reel `.mp4`) plus `posts/<date>-<slot>-preview.txt` (caption), and sent to the owner with SendUserFile and a PushNotification asking for approval.
+- When the owner approves in the chat ("ok", "aprovado", picks an option), rename the preview files to the approved names (`posts/<date>-<slot>.jpg` / `.mp4` / `-1.jpg`… and `.txt`), commit and push. If they ask for changes, make them, send again, and wait.
+- At post time: if approved files exist, publish/send those. **If only the preview exists (no answer in time), use the preview as is** (the owner agreed to this fallback) and say so in the summary.
+- If there's no preview at all (the prepare run failed), make the post as usual.
+
 **Pre-approved posts:** if `posts/<today>-<slot>.jpg` (or `.mp4`, or a carousel `posts/<today>-<slot>-1.jpg`, `-2.jpg`, ...) and `posts/<today>-<slot>.txt` already exist, the owner already approved them. Publish those as they are (the .txt is the caption) instead of making something new, then send the Story reshare reminder and log as usual.
 
 If `research.md` exists in the repo, read it first and apply what it says works (hooks, formats, caption style, hashtags).
