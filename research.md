@@ -311,6 +311,17 @@ This also explains section 1 to 6 better than "comparisons win": every top post 
 9. **Collabs.** Ask 2 or 3 Brazilian GTA meme pages in the 5K to 50K range for a collab post. Co-authored Reels reach both audiences; it is most of Davy Jones's reach.
 10. **Use Trial Reels** (shown to non-followers first) once the account has access, to test hooks without spending the grid.
 
+### 7.6 Profile: the Nov 9 fixes are still not applied
+
+Checked the live profile through the API on Nov 10 against `instagram/profile-score.md` (44/100):
+- Name is still "GTA VI CLIPZ" (checklist: `GTA VI Clipz | Notícias GTA 6`, so the page shows up in search for "notícias gta 6").
+- Bio is still the old four emoji lines and still says "vazamentos". Leaks are something the playbook forbids posting, so the bio promises what the page does not deliver.
+- Pinned posts and highlights cannot be read through the API. Check them in the app.
+
+Reach without a profile that converts is wasted, so do the checklist before launch week. One change to the pin list: pin posts that are our own material (the PS Store purchase Reel, the Edge/police carousel), not trailer cuts.
+
+`instagram/voice-template.md` is still the blank template. The owner's own captions ("Po Rockstar, não vacila 😭", "Caiu a ficha que falta apenas 1 mês") are the best-performing voice we have and should be the samples it is filled from.
+
 ### 7.5 Confidence
 
 The originality rule is well reported by several outlets, but I have not seen our Account Status and cannot confirm we are flagged. Treat 7.2 as the leading hypothesis until step 1 is checked. The "what breaks out" list is drawn from big accounts plus general ranking statements, not from a measured sample of small GTA pages. That sample still needs a browser session where Instagram is reachable (the `ig-viral` swipe file).
