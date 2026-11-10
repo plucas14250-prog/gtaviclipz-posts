@@ -11,7 +11,7 @@ The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes 
 
 Why (insights from 2026-11-10, see research.md 7.8): a Reel reached about 140 non-followers; an image post reached 10 followers and no one else. Only Reels reach new people at this size.
 
-**Approval flow (owner's request):** each post is prepared about 3 hours early by a separate "prepare" run, saved as `posts/<date>-<slot>-preview.*` (image `.jpg`, carousel `-preview-1.jpg`…, or Reel `.mp4`) plus `posts/<date>-<slot>-preview.txt` (caption), and sent to the owner with SendUserFile and a PushNotification asking for approval.
+**Approval flow (owner's request):** each post is prepared about 1 hour early by a separate "prepare" run (owner is 2 hours behind Brasília, US Eastern; give times in both), saved as `posts/<date>-<slot>-preview.*` (image `.jpg`, carousel `-preview-1.jpg`…, or Reel `.mp4`) plus `posts/<date>-<slot>-preview.txt` (caption), and sent to the owner with SendUserFile and a PushNotification asking for approval.
 - When the owner approves in the chat ("ok", "aprovado", picks an option), rename the preview files to the approved names (`posts/<date>-<slot>.jpg` / `.mp4` / `-1.jpg`… and `.txt`), commit and push. If they ask for changes, make them, send again, and wait.
 - At post time: if approved files exist, publish/send those. **If only the preview exists (no answer in time), use the preview as is** (the owner agreed to this fallback) and say so in the summary.
 - If there's no preview at all (the prepare run failed), make the post as usual.
