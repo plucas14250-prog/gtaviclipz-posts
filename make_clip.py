@@ -55,13 +55,18 @@ def clean(text):
 
 
 def detect_bars(src):
-    """Find black letterbox bars (e.g. cinema-style trailers) so they can be cropped off."""
+    """Find black letterbox bars (e.g. cinema-style trailers) so they can be cropped off.
+    Ignores results that would cut into the picture (dark scenes fool cropdetect)."""
     proc = subprocess.run(["ffmpeg", "-ss", "15", "-i", src, "-t", "30", "-vf", "cropdetect=24:2:0",
                            "-f", "null", "-"], capture_output=True, text=True)
     found = re.findall(r"crop=(\d+):(\d+):(\d+):(\d+)", proc.stderr)
-    if not found:
+    size = re.search(r"Stream.*Video.* (\d{3,5})x(\d{3,5})", proc.stderr)
+    if not found or not size:
         return None
-    w, h, x, y = max(set(found), key=found.count)
+    sw, sh = int(size.group(1)), int(size.group(2))
+    w, h, x, y = map(int, max(set(found), key=found.count))
+    if w < sw * 0.95 or h < sh * 0.6:
+        return None
     return f"crop={w}:{h}:{x}:{y},"
 
 
@@ -214,12 +219,15 @@ def main():
     p.add_argument("--bottom")
     p.add_argument("--badge")
     p.add_argument("--keep-audio", action="store_true")
+    p.add_argument("--srccrop", help='crop the source first, e.g. "1920:1080:0:124" (overrides bar detection)')
+    p.add_argument("--fit", action="store_true",
+                   help="show the whole frame (for screen recordings with text) on a blurred copy instead of cropping")
     p.add_argument("--out", required=True)
     args = p.parse_args()
 
     for k in ("tag", "top", "line2", "bottom", "badge"):
         setattr(args, k, clean(getattr(args, k)))
-    bars = detect_bars(args.src) or ""
+    bars = f"crop={args.srccrop}," if args.srccrop else (detect_bars(args.src) or "")
     tmp = tempfile.mkdtemp()
     ov = os.path.join(tmp, "overlay.png")
     overlay_png(args, ov)
@@ -239,6 +247,16 @@ def main():
     for i, (st, du, xx) in enumerate(segs):
         od = du / args.slow
         xx = min(max(xx, 0.0), 1.0)
+        if args.fit:
+            vh = H - BAR
+            chains.append(
+                f"[0:v]trim=start={st}:duration={du},setpts=(PTS-STARTPTS)/{args.slow},{bars}split[a{i}][b{i}];"
+                f"[a{i}]scale=-2:{vh},crop={W}:{vh},boxblur=25:4,eq=brightness=-0.25[bg{i}];"
+                f"[b{i}]scale={W}:-2[fg{i}];"
+                f"[bg{i}][fg{i}]overlay=0:(H-h)/2,pad={W}:{H}:0:{BAR}:0x0A0A0C,fps=30,format=yuv420p,setsar=1[s{i}]")
+            labels.append(f"[s{i}]")
+            total += od
+            continue
         chains.append(
             f"[0:v]trim=start={st}:duration={du},setpts=(PTS-STARTPTS)/{args.slow},{bars}"
             f"scale=w=-2:h='trunc({H - BAR}*(1+({z}-1)*t/{od})/2)*2':eval=frame,"
