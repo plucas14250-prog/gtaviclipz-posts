@@ -7,7 +7,7 @@ The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes 
 | Slot (US Eastern) | Feed post |
 |---|---|
 | **am** (9:53, ~12h Brasília) | Image post, or a carousel (3 to 5 slides) about every other day |
-| **pm** (17:53, ~20h Brasília) | **Reel** made with `make_reel.py` |
+| **pm** (17:53, ~20h Brasília) | **Reel** from real footage with `make_clip.py` |
 
 Launch week (2026-11-17 to 2026-11-21): the am slot also posts a Reel instead of an image.
 
@@ -36,7 +36,7 @@ The Reel headline must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO",
 8. If a trailer has no shot map yet, make one first with `scenes.py` (look at every shot, list the ones with people and the subject's x position).
 
 **Reels are NOT auto-published.** The owner adds a trending Instagram song in the phone app, which the API can't do. So for a Reel:
-1. Build it with `make_reel.py` and push it to the repo (no music file needed).
+1. Build it with `make_clip.py` (real footage, no zoom) and push it to the repo (no music file needed).
 2. Do **not** run `publish.py --reel`.
 3. Send the owner the video with `SendUserFile` (status "proactive"), and in your message give: the caption ready to copy, and 2 to 3 suggested song vibes that fit (e.g. "funk/phonk agressivo", "synthwave anos 80"). Tell them to pick whatever sound is trending in the Reels audio tab.
 4. Remind the owner to turn on "Compartilhar no story" when posting the Reel.
