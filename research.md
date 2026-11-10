@@ -335,6 +335,27 @@ To tell which it is, we need per-Reel insights from the app for 3 or 4 recent Re
 - Views near follower count and almost all from followers: the Reel never left the test audience. Fix the first 2 seconds and the idea.
 - Many non-follower views but few follows: the content travels and the profile does not convert. Do 7.6 first.
 
+### 7.8 First real insights (owner screenshots, Nov 10)
+
+| Post | Views | Viewers | Non-follower sources | Other |
+|---|---|---|---|---|
+| Reel Nov 9 pm, "HOJE VOCÊ JÁ PODE BAIXAR O GTA 6" (7.8 s) | 198 (typical Reel ~120) | 135 | Reels tab 67.0%, Explore 5.9% | skip rate 47.8%, share 0.7%, like 4.4%, comment 1.5%, save 0%, repost 0.7%, avg watch 6 s, ~25% still watching at the end, 0 follows |
+| Image Nov 10 am, "FALTAM 9 DIAS" (at ~2.5 h) | 23 (typical ~32 at 6 h) | 10 | none (Feed 54.5%, Stories 45.5%) | 2 likes, 0 follows |
+| Story Nov 10 | 7 | n/a | 0% | 3 likes, 3 exits |
+
+What this says:
+1. **Reels are being recommended.** About 73% of the Reel's views came from the Reels tab and Explore, so roughly 140 views from strangers. Instagram tests each Reel on a batch of 100 to 150 people and then stops.
+2. **It stops at the first gate: skip rate.** Instagram lists skip rate first "in order of importance to reach", and 47.8% of people swiped away at the start. One share in 135 viewers gave it no second push.
+3. **The opening frame is the likely reason.** The Reel opens on a parked boat with nobody in it, under a black header that takes about 40% of the screen. That breaks our own rule to open on a face, and the header makes it look like a template before the footage registers.
+4. **Images and Stories reach almost nobody.** The image reached 10 people out of 196 followers and no strangers; the Story got 7 views. The followers are cold. These formats cannot grow the page at this size.
+5. **No follows from 135 viewers**, so the profile fixes in 7.6 still matter once reach improves.
+
+Changes this adds to 7.4:
+- Put the effort into Reels. Make the am slot a Reel too, or a carousel only when there is real news.
+- First frame: full-screen footage, a face or something moving, the hook text over the picture. No black header band, no avatar block.
+- Judge every Reel on skip rate first, then share rate. Aim to get skip rate clearly under 40% before worrying about anything else. That target is our own working number, not an Instagram threshold.
+- The Nov 10 pm purchase Reel (full screen, owner's own footage) is the first test of this. Compare its skip rate with 47.8%.
+
 ### 7.5 Confidence
 
 The originality rule is well reported by several outlets, but I have not seen our Account Status and cannot confirm we are flagged. Treat 7.2 as the leading hypothesis until step 1 is checked. The "what breaks out" list is drawn from big accounts plus general ranking statements, not from a measured sample of small GTA pages. That sample still needs a browser session where Instagram is reachable (the `ig-viral` swipe file).
