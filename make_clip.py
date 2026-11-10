@@ -8,7 +8,7 @@ Example:
 
 Options:
   --start / --dur   where in the trailer to cut (seconds)
-  --cuts            montage instead: "start:dur:x,start:dur:x,..." (see footage/*-shots.json)
+  --cuts            several pieces: "start:dur:x[:speed],..." (speed 2 = twice as fast; see footage/*-shots.json)
   --x               which part of the wide frame to keep, 0 = left, 0.5 = center, 1 = right
   --zoom            slow push-in over the clip (1.0 = none, 1.2 = 20% closer by the end)
   --slow            playback speed (0.5 = half speed, good for details)
@@ -211,7 +211,7 @@ def main():
     p.add_argument("--cuts")
     p.add_argument("--dur", type=float, default=8)
     p.add_argument("--x", type=float, default=0.5)
-    p.add_argument("--zoom", type=float, default=1.1)
+    p.add_argument("--zoom", type=float, default=1.0)
     p.add_argument("--slow", type=float, default=1.0)
     p.add_argument("--tag")
     p.add_argument("--top")
@@ -237,20 +237,22 @@ def main():
         segs = []
         for part in args.cuts.split(","):
             a = part.split(":")
-            segs.append((float(a[0]), float(a[1]), float(a[2]) if len(a) > 2 else args.x))
+            segs.append((float(a[0]), float(a[1]), float(a[2]) if len(a) > 2 else args.x,
+                         float(a[3]) if len(a) > 3 else 1.0))
     else:
         if args.start is None:
             p.error("give --start or --cuts")
-        segs = [(args.start, args.dur, args.x)]
+        segs = [(args.start, args.dur, args.x, 1.0)]
 
     chains, labels, total = [], [], 0.0
-    for i, (st, du, xx) in enumerate(segs):
-        od = du / args.slow
+    for i, (st, du, xx, sp) in enumerate(segs):
+        sp = sp * args.slow
+        od = du / sp
         xx = min(max(xx, 0.0), 1.0)
         if args.fit:
             vh = H - BAR
             chains.append(
-                f"[0:v]trim=start={st}:duration={du},setpts=(PTS-STARTPTS)/{args.slow},{bars}split[a{i}][b{i}];"
+                f"[0:v]trim=start={st}:duration={du},setpts=(PTS-STARTPTS)/{sp},{bars}split[a{i}][b{i}];"
                 f"[a{i}]scale=-2:{vh},crop={W}:{vh},boxblur=25:4,eq=brightness=-0.25[bg{i}];"
                 f"[b{i}]scale={W}:-2[fg{i}];"
                 f"[bg{i}][fg{i}]overlay=0:(H-h)/2,pad={W}:{H}:0:{BAR}:0x0A0A0C,fps=30,format=yuv420p,setsar=1[s{i}]")
@@ -258,7 +260,7 @@ def main():
             total += od
             continue
         chains.append(
-            f"[0:v]trim=start={st}:duration={du},setpts=(PTS-STARTPTS)/{args.slow},{bars}"
+            f"[0:v]trim=start={st}:duration={du},setpts=(PTS-STARTPTS)/{sp},{bars}"
             f"scale=w=-2:h='trunc({H - BAR}*(1+({z}-1)*t/{od})/2)*2':eval=frame,"
             f"crop={W}:{H - BAR}:'(iw-{W})*{xx}':'(ih-{H - BAR})/2',"
             f"pad={W}:{H}:0:{BAR}:0x0A0A0C,fps=30,format=yuv420p,setsar=1[s{i}]")
@@ -269,7 +271,7 @@ def main():
 
     cmd = ["ffmpeg", "-y", "-i", args.src, "-i", ov]
     if args.keep_audio and len(segs) == 1:
-        st, du, _ = segs[0]
+        st, du, _, _ = segs[0]
         cmd += ["-filter_complex", vf + f";[0:a]atrim=start={st}:duration={du},asetpts=PTS-STARTPTS,atempo={max(args.slow, 0.5)}[a]",
                 "-map", "[out]", "-map", "[a]"]
     else:
