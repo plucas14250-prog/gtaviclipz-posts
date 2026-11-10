@@ -54,7 +54,15 @@
   "headline": "HOJE VOCÊ JÁ PODE BAIXAR O GTA 6 (pre-download, trailer montage)",
   "image": "posts/2026-11-09-pm.mp4",
   "source": "footage/launch-trailer.mp4 cuts 11.3,25.8,39.9,72.15,71.45,66.5",
-  "permalink": "sent to owner"
+  "permalink": "sent to owner",
+  "insights": {
+   "views": 198,
+   "viewers": 135,
+   "skip_rate": 47.8,
+   "share_rate": 0.7,
+   "nonfollower_pct": 73,
+   "note": "old header layout, opened on empty boat; read 2026-11-10"
+  }
  },
  {
   "date": "2026-11-10",

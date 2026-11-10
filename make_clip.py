@@ -19,7 +19,14 @@ Options:
   --badge           pink pill in the top-right corner (e.g. a countdown)
   --keep-audio      keep the trailer's own audio (off by default: the owner adds
                     Instagram music, and trailer music can get the Reel muted)
-Every clip gets "Imagens: Rockstar Games" and @gtaviclipz_6 in small text.
+  --credit          small credit at the bottom (default "Imagens: Rockstar Games");
+                    pass --credit "" for footage the owner recorded
+  --header          old layout: black band with avatar and text above the video.
+                    Avoid: Reels with it lost about half their viewers at the start.
+
+Default layout is full screen: the footage fills 1080x1920 and the headline sits
+over the picture, inside Instagram's safe area. The first frame must show a face
+or something moving.
 """
 import argparse
 import re
@@ -35,7 +42,8 @@ F_BOLD = "/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf"
 RED = (230, 20, 40)
 YELLOW = (255, 212, 40)
 BG = (10, 10, 12)
-BAR = 720  # height of the top area (profile + text); the video fills the rest
+BAR = 0  # set to 720 by --header (old layout: black band with profile + text above the video)
+SAFE_TOP = 270  # Instagram covers the top and bottom of a Reel with its own buttons and caption
 _FONTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "fonts")
 F_HEAD = os.path.join(_FONTS, "Anton.woff")            # big headline, same style as the Canva designs
 F_SEMI = os.path.join(_FONTS, "Oswald-SemiBold.woff")  # second line and page name
@@ -109,9 +117,7 @@ def avatar_circle(path, size):
     return out
 
 
-def overlay_png(args, path):
-    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(img)
+def overlay_header(args, img, d):
     d.rectangle([0, 0, W, BAR], fill=BG)
 
     # Profile row: avatar with a gradient ring, name and handle, centered.
@@ -185,12 +191,52 @@ def overlay_png(args, path):
     bgc = Image.new("RGBA", (r, r), BG + (255,))
     img.paste(bgc, (0, BAR), corner)
     img.paste(bgc, (W - r, BAR), corner.transpose(Image.FLIP_LEFT_RIGHT))
+
+
+def overlay_full(args, img, d):
+    """Headline over the footage: white with a black outline, on a soft dark fade."""
+    head_f, head_lines = (None, [])
+    if args.top:
+        head_f, head_lines = fit_font(d, args.top.upper(), F_HEAD, 104, W - 200, 3)
+    l2_f, l2_lines = (None, [])
+    if args.line2:
+        l2_f, l2_lines = fit_font(d, args.line2.upper(), F_SEMI, 52, W - 220, 2)
+    if not head_lines and not l2_lines:
+        return
+    h = int(head_f.size * 1.12) * len(head_lines) if head_lines else 0
+    if l2_lines:
+        h += 18 + int(l2_f.size * 1.3) * len(l2_lines)
+    fade = SAFE_TOP + h + 160
+    for i in range(fade):
+        a = int(150 * (1 - i / fade) ** 1.5)
+        d.line([(0, i), (W, i)], fill=(0, 0, 0, a))
+    y = SAFE_TOP
+    for line in head_lines:
+        lw = d.textlength(line, font=head_f)
+        d.text(((W - lw) / 2, y), line, font=head_f, fill="white", stroke_width=7, stroke_fill=(0, 0, 0, 255))
+        y += int(head_f.size * 1.12)
+    if l2_lines:
+        y += 18
+        for line in l2_lines:
+            lw = d.textlength(line, font=l2_f)
+            d.text(((W - lw) / 2, y), line, font=l2_f, fill=YELLOW, stroke_width=5, stroke_fill=(0, 0, 0, 255))
+            y += int(l2_f.size * 1.3)
+
+
+def overlay_png(args, path):
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    if BAR:
+        overlay_header(args, img, d)
+    else:
+        overlay_full(args, img, d)
     for i in range(160):
         a = int(150 * (i / 160) ** 2)
         d.line([(0, H - 160 + i), (W, H - 160 + i)], fill=(0, 0, 0, a))
     cf = ImageFont.truetype(F_REG, 30)
-    credit = "Imagens: Rockstar Games"
-    d.text(((W - d.textlength(credit, font=cf)) / 2, H - 72), credit, font=cf, fill=(220, 220, 220, 230))
+    credit = args.credit
+    if credit:
+        d.text(((W - d.textlength(credit, font=cf)) / 2, H - 72), credit, font=cf, fill=(220, 220, 220, 230))
 
     if args.bottom:
         sf, lines = fit_font(d, args.bottom.upper(), F_BOLD, 54, W - 200, 2)
@@ -222,8 +268,12 @@ def main():
     p.add_argument("--srccrop", help='crop the source first, e.g. "1920:1080:0:124" (overrides bar detection)')
     p.add_argument("--fit", action="store_true",
                    help="show the whole frame (for screen recordings with text) on a blurred copy instead of cropping")
+    p.add_argument("--credit", default="Imagens: Rockstar Games")
+    p.add_argument("--header", action="store_true")
     p.add_argument("--out", required=True)
     args = p.parse_args()
+    global BAR
+    BAR = 720 if args.header else 0
 
     for k in ("tag", "top", "line2", "bottom", "badge"):
         setattr(args, k, clean(getattr(args, k)))

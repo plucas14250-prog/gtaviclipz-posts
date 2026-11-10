@@ -6,10 +6,10 @@ The page is a Brazilian GTA VI fan page. Each scheduled run makes and publishes 
 
 | Slot (US Eastern) | Feed post |
 |---|---|
-| **am** (9:53, ~12h Brasília) | Image post, or a carousel (3 to 5 slides) about every other day |
-| **pm** (17:53, ~20h Brasília) | **Reel** from real footage with `make_clip.py` |
+| **am** (9:53, ~12h Brasília) | **Reel** with `make_clip.py`. A carousel (3 to 5 slides) instead only when there is real news from the last 24 hours. No single-image posts. |
+| **pm** (17:53, ~20h Brasília) | **Reel** with `make_clip.py` |
 
-Launch week (2026-11-17 to 2026-11-21): the am slot also posts a Reel instead of an image.
+Why (insights from 2026-11-10, see research.md 7.8): a Reel reached about 140 non-followers; an image post reached 10 followers and no one else. Only Reels reach new people at this size.
 
 **Approval flow (owner's request):** each post is prepared about 3 hours early by a separate "prepare" run, saved as `posts/<date>-<slot>-preview.*` (image `.jpg`, carousel `-preview-1.jpg`…, or Reel `.mp4`) plus `posts/<date>-<slot>-preview.txt` (caption), and sent to the owner with SendUserFile and a PushNotification asking for approval.
 - When the owner approves in the chat ("ok", "aprovado", picks an option), rename the preview files to the approved names (`posts/<date>-<slot>.jpg` / `.mp4` / `-1.jpg`… and `.txt`), commit and push. If they ask for changes, make them, send again, and wait.
@@ -21,7 +21,20 @@ Launch week (2026-11-17 to 2026-11-21): the am slot also posts a Reel instead of
 If `research.md` exists in the repo, read it first and apply what it says works (hooks, formats, caption style, hashtags).
 
 **Reels:** see the Reel rules below (real footage only, no slides, no zoom).
-The Reel headline must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO", "VOCÊ TÁ PRONTO?").
+The Reel headline must be a strong hook ("NINGUÉM PERCEBEU ISSO", "EU DIA 19 ÀS 00:01", "VOCÊ TÁ PRONTO?").
+
+**The first second decides the Reel (always):**
+- Instagram ranks skip rate first for reach. Our 2026-11-09 Reel opened on an empty boat under a black header and 47.8% of viewers swiped away.
+- **Full screen only.** `make_clip.py` now fills the whole 1080x1920 frame and puts the headline over the footage. Never use `--header` (the old black band with the avatar).
+- **Frame 0 must show a face or something moving.** A shot from the shot map can start a moment before the person appears, so move the cut start forward until frame 0 has the subject. Extract frame 0 of the finished file and look at it before sending.
+- The headline must be readable on frame 0 and make sense without the caption.
+
+**Every Reel must have something of ours in it (always):** Instagram replaces near-identical copies of a clip with the original in recommendations, and a headline, speed change or credit does not count as an edit. A bare montage of trailer shots is not allowed. Pick one of these, in this order of preference:
+1. **Owner's own footage** in `footage/` (screen recordings, console, gameplay from 2026-11-19 on). Use `--credit ""`.
+2. **Detail breakdown:** one or two trailer shots, slowed or held on the detail, with our own explanation as headline + second line ("NINGUÉM PERCEBEU ISSO" / what to look at).
+3. **Meme:** one trailer shot as the reaction, with a first-person situation as the headline ("EU CHEGANDO NO TRABALHO DIA 20 SEM DORMIR").
+4. **Owner's voice:** if the owner sent a voice note, lay it over the clip.
+If none of these is possible today, ask the owner for a recording instead of posting a montage.
 
 **Reel rules from the owner (always):**
 - **No slideshows.** Never build a Reel from still slides or images (`make_reel.py` is retired). Reels are real moving footage only: trailer clips, the owner's own recordings, gameplay.
@@ -30,13 +43,13 @@ The Reel headline must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO",
 - For screen recordings, crop on the part with readable text (`--srccrop` to remove black bars first).
 
 **Reels from real footage (required):** if `footage/` has trailers, make Reels from them.
-1. Use the shot map `footage/<trailer>-shots.json`. **Build a fast montage of 5 to 7 "characters" shots** (Jason, Lucia, faces, action). Never a clip with only cars, buildings or empty streets.
-2. Order: open on the strongest face shot, end on an emotional or explosive one. Total 6 to 9 seconds.
+1. Use the shot map `footage/<trailer>-shots.json`. Use **1 to 3 "characters" shots** (Jason, Lucia, faces, action) that serve the breakdown or the meme. Never a clip with only cars, buildings or empty streets.
+2. Order: open on the strongest face shot. Total 5 to 9 seconds.
 3. Check `log.json` and don't repeat the same opening shot within 7 days (log `"source": "<file> cuts <starts>"`).
 4. `python3 make_clip.py footage/<file>.mp4 --cuts "start:dur:x,start:dur:x,..." --top "<hook>" --line2 "<detail>" --out posts/<date>-<slot>.mp4`
-   Layout: profile picture + name at the top, centered headline in Anton (max ~8 words), a yellow second line in Oswald (no red/pink tags), then the footage filling the bottom. Letterbox bars and emoji are removed automatically. Put emoji in the caption, not on screen.
-5. Open 4 to 6 frames of the result and check that every shot shows a person and the text fits.
-6. Caption must include "Imagens: Rockstar Games".
+   Layout: footage fills the whole screen; centered headline in Anton with a black outline (max ~8 words) and a yellow second line in Oswald sit over the picture, below Instagram's top buttons. Full screen keeps only about a third of the trailer's width, so set each cut's x on the subject. Letterbox bars and emoji are removed automatically. Put emoji in the caption, not on screen.
+5. Open frame 0 and 4 to 6 more frames of the result. Frame 0 must show the subject; every shot shows a person; the text fits and doesn't cover the face.
+6. Caption must include "Imagens: Rockstar Games" when Rockstar footage is used.
 7. Never use `--bottom` unless someone in the clip is talking.
 8. If a trailer has no shot map yet, make one first with `scenes.py` (look at every shot, list the ones with people and the subject's x position).
 
@@ -47,6 +60,7 @@ The Reel headline must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO",
 4. Remind the owner to turn on "Compartilhar no story" when posting the Reel.
 6. **Send a push notification** with the `PushNotification` tool (status "proactive") right after sending the video, e.g. "Hora de postar o Reel 🎬 Vídeo e legenda prontos no chat. Põe uma música em alta e posta!" The owner asked to be alerted when it's time to post.
 5. Log it with `"format": "reel-manual"` and `"permalink": "sent to owner"`.
+7. **Ask for yesterday's numbers.** The API can't read insights, so in the same message ask the owner for a screenshot of the previous Reel's insights ("What impacts your views" and "Top sources of views"). When they send it, add `"insights": {"views", "viewers", "skip_rate", "share_rate", "nonfollower_pct"}` to that Reel's entry in `log.json`. Before choosing today's Reel, read the logged insights and repeat the type with the lowest skip rate. Working target: skip rate under 40%, then share rate above 1%.
 
 **Carousels:** make a multi-page Canva design (format "Instagram Post (Portrait)"), export each page as JPG, run `fit.py` on each, then `python3 publish.py --carousel caption.txt p1.jpg p2.jpg ...`.
 
@@ -107,7 +121,7 @@ Formats that work best for big GTA 6 pages (see research.md): comparisons ("Qual
   - **Images and carousels:** line 1 is the hook. Concrete, short, ends on a cliff, never a greeting, never starting with an emoji or hashtag.
 - **Search phrases:** put 1 or 2 phrases Brazilians actually type into the text naturally, e.g. "pré-download do GTA 6", "data de lançamento do GTA 6", "mapa do GTA 6", "trailer do GTA 6". Instagram search reads caption text; hashtags are just labels now.
 - **Hashtags:** 2 or 3 (Instagram allows at most 5 since Dec 2025). Never #viral, #fyp, #explorepage.
-- **One ask per post:** comment, save, or share. Pick one.
+- **One ask per post:** comment, save, or share. Pick one. On memes and relatable Reels make it a send ("manda pra quem vai jogar com você"); keep the comment question for polls and choices.
 - **Hooks:** for headlines, vary the formula using `.claude/skills/ig-reel/hooks.json` (26 formulas), adapted to Portuguese and GTA, e.g. "Ninguém te conta que…", "GTA 5 vs GTA 6: um deles não chega nem perto", "X coisas sobre Y. A número 4 ninguém percebeu", "Isso muda dia 19. Faça X antes". Don't use the same formula twice in a row.
 
 ### Humanizer pass (required, every caption)
