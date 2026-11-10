@@ -25,7 +25,7 @@ The Reel headline must be a strong hook ("NINGUÉM PERCEBEU ISSO", "EU DIA 19 À
 
 **The first second decides the Reel (always):**
 - Instagram ranks skip rate first for reach. Our 2026-11-09 Reel opened on an empty boat under a black header and 47.8% of viewers swiped away.
-- **Full screen only.** `make_clip.py` now fills the whole 1080x1920 frame and puts the headline over the footage. Never use `--header` (the old black band with the avatar).
+- **No black header band.** Never use `--header` (the old black band with the avatar). Gameplay and trailer footage fill the whole 1080x1920 frame with the headline over it; screen recordings use `--fit` (see the Reel rules below).
 - **Frame 0 must show a face or something moving.** A shot from the shot map can start a moment before the person appears, so move the cut start forward until frame 0 has the subject. Extract frame 0 of the finished file and look at it before sending.
 - The headline must be readable on frame 0 and make sense without the caption.
 
@@ -40,7 +40,7 @@ If none of these is possible today, ask the owner for a recording instead of pos
 - **No slideshows.** Never build a Reel from still slides or images (`make_reel.py` is retired). Reels are real moving footage only: trailer clips, the owner's own recordings, gameplay.
 - **No zoom.** Never use `--zoom` (default is off). Framing is a static crop.
 - Edit like a real video: keep continuous stretches that have movement (screens changing, a countdown ticking, characters moving), cut dead parts, and fast-forward boring stretches with the per-cut speed (`start:dur:x:speed`, e.g. 1.8). Reframe the same moment with a second cut only when the subject moves out of frame.
-- For screen recordings, crop on the part with readable text (`--srccrop` to remove black bars first).
+- **Screen recordings (PS5, store, phone): always use `--fit`** so the whole screen is visible, centered on a blurred copy of itself, with the headline over the blurred part above it (owner's choice, 2026-11-10). Never crop a screen recording down to part of the screen. Remove the recording's own black borders first with `--srccrop` (find them with `ffmpeg -i <file> -t 30 -vf cropdetect=24:2:0 -f null -`; for `footage/buying-gta6.mp4` it is `1904:1080:14:124`).
 
 **Reels from real footage (required):** if `footage/` has trailers, make Reels from them.
 1. Use the shot map `footage/<trailer>-shots.json`. Use **1 to 3 "characters" shots** (Jason, Lucia, faces, action) that serve the breakdown or the meme. Never a clip with only cars, buildings or empty streets.
