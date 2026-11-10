@@ -55,5 +55,14 @@
   "image": "posts/2026-11-09-pm.mp4",
   "source": "footage/launch-trailer.mp4 cuts 11.3,25.8,39.9,72.15,71.45,66.5",
   "permalink": "sent to owner"
+ },
+ {
+  "date": "2026-11-10",
+  "slot": "am",
+  "format": "image",
+  "headline": "FALTAM 9 DIAS (trailer frame: Jason e Lucia no carro vermelho)",
+  "image": "posts/2026-11-10-am.jpg",
+  "source": "footage/launch-trailer.mp4 @40.6s",
+  "permalink": "https://www.instagram.com/p/DfkK12FkmN1/"
  }
 ]
