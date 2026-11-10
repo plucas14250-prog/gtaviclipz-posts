@@ -40,6 +40,7 @@ The Reel headline must be a strong hook ("PAROU TUDO", "NINGUÉM PERCEBEU ISSO",
 2. Do **not** run `publish.py --reel`.
 3. Send the owner the video with `SendUserFile` (status "proactive"), and in your message give: the caption ready to copy, and 2 to 3 suggested song vibes that fit (e.g. "funk/phonk agressivo", "synthwave anos 80"). Tell them to pick whatever sound is trending in the Reels audio tab.
 4. Remind the owner to turn on "Compartilhar no story" when posting the Reel.
+6. **Send a push notification** with the `PushNotification` tool (status "proactive") right after sending the video, e.g. "Hora de postar o Reel 🎬 Vídeo e legenda prontos no chat. Põe uma música em alta e posta!" The owner asked to be alerted when it's time to post.
 5. Log it with `"format": "reel-manual"` and `"permalink": "sent to owner"`.
 
 **Carousels:** make a multi-page Canva design (format "Instagram Post (Portrait)"), export each page as JPG, run `fit.py` on each, then `python3 publish.py --carousel caption.txt p1.jpg p2.jpg ...`.
