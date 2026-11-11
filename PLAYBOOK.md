@@ -23,6 +23,11 @@ If `research.md` exists in the repo, read it first and apply what it says works 
 **Reels:** see the Reel rules below (real footage only, no slides, no zoom).
 The Reel headline must be a strong hook ("NINGUÉM PERCEBEU ISSO", "EU DIA 19 ÀS 00:01", "VOCÊ TÁ PRONTO?").
 
+**What the insights say so far (updated 2026-11-11):**
+- Best Reel: the meme "Eu ligando pro chefe dia 19" (11/11 am): ~170 views in 9h (typical ~110 in 12h), 82% non-followers, **share rate 3.1%** (4 sends), skip rate 45.8% (better than usual, still above the 40% target).
+- The audience is mostly **25-34 (46-58%)**, then 18-24. Jokes about adult life (trabalho, chefe, boletos, faltar no trabalho, "minha mulher/namorada", sono) and nostalgia (GTA San Andreas, Vice City 2002, GTA V 2013) fit this audience. Prefer memes in this style, with a send ask.
+- About 64% of views come from the Reels tab, so the first second decides everything.
+
 **The first second decides the Reel (always):**
 - Instagram ranks skip rate first for reach. Our 2026-11-09 Reel opened on an empty boat under a black header and 47.8% of viewers swiped away.
 - **No black header band.** Never use `--header` (the old black band with the avatar). Gameplay and trailer footage fill the whole 1080x1920 frame with the headline over it; screen recordings use `--fit` (see the Reel rules below).

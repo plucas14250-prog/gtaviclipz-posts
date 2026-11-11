@@ -56,12 +56,24 @@
   "source": "footage/launch-trailer.mp4 cuts 11.3,25.8,39.9,72.15,71.45,66.5",
   "permalink": "sent to owner",
   "insights": {
-   "views": 198,
-   "viewers": 135,
-   "skip_rate": 47.8,
-   "share_rate": 0.7,
-   "nonfollower_pct": 73,
-   "note": "old header layout, opened on empty boat; read 2026-11-10"
+   "likes": 6,
+   "comments": 2,
+   "reposts": 1,
+   "shares": 1,
+   "saves": 0,
+   "nonfollower_pct": 74.2,
+   "comment_rate": 1.4,
+   "age_18_24": 42.6,
+   "age_25_34": 46.2,
+   "sources": {
+    "reels_tab": 63.6,
+    "feed": 16.7,
+    "stories": 6.6,
+    "profile": 6.1,
+    "explore": 5.6
+   },
+   "retention_note": "~50% still watching at 4s, ~25% at 7s",
+   "read_on": "2026-11-11"
   }
  },
  {
@@ -107,7 +119,23 @@
   "headline": "EU LIGANDO PRO CHEFE DIA 19 (meme, 10 cuts, natural speed)",
   "image": "posts/2026-11-11-am.mp4",
   "source": "footage/launch-trailer.mp4 cuts 11.95,52.35,59.25,37.35,61.4,34.55,62.55,39.9,66.5,72.15",
-  "permalink": "https://www.instagram.com/reel/Dfmu2PUAioy/"
+  "permalink": "https://www.instagram.com/reel/Dfmu2PUAioy/",
+  "insights": {
+   "views_9h": 170,
+   "typical_views_12h": 110,
+   "likes": 8,
+   "comments": 0,
+   "reposts": 0,
+   "shares": 4,
+   "saves": 0,
+   "skip_rate": 45.8,
+   "share_rate": 3.1,
+   "like_rate": 6.1,
+   "nonfollower_pct": 82.2,
+   "age_18_24": 33.1,
+   "age_25_34": 57.7,
+   "read_on": "2026-11-11 (~9h after posting)"
+  }
  },
  {
   "date": "2026-11-11",
