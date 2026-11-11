@@ -27,6 +27,7 @@ The Reel headline must be a strong hook ("NINGUÉM PERCEBEU ISSO", "EU DIA 19 À
 - Best Reel: the meme "Eu ligando pro chefe dia 19" (11/11 am): ~170 views in 9h (typical ~110 in 12h), 82% non-followers, **share rate 3.1%** (4 sends), skip rate 45.8% (better than usual, still above the 40% target).
 - The audience is mostly **25-34 (46-58%)**, then 18-24. Jokes about adult life (trabalho, chefe, boletos, faltar no trabalho, "minha mulher/namorada", sono) and nostalgia (GTA San Andreas, Vice City 2002, GTA V 2013) fit this audience. Prefer memes in this style, with a send ask.
 - About 64% of views come from the Reels tab, so the first second decides everything.
+- Worst Reel: "Comprando o GTA 6" (11/10 pm): **skip rate 66.1%**, average watch 3s of 16s, 0 shares. Causes: old black header layout, the PS5 screen shown small in `--fit` mode, slow start (store screens, no face), too long. So: **keep Reels 5 to 10 seconds, never use `--fit` (screen too small), open on a big face or action, and screen recordings only as a short insert, not the whole Reel.**
 
 **The first second decides the Reel (always):**
 - Instagram ranks skip rate first for reach. Our 2026-11-09 Reel opened on an empty boat under a black header and 47.8% of viewers swiped away.
