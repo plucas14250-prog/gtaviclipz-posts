@@ -1,4 +1,3 @@
-Option A, short cut (2.9s):
-- footage/launch-trailer.mp4 7.6s (1.6s) — polishing
-- footage/launch-trailer.mp4 57.95s (1.25s) — couch
+Single shot, slow motion (5.5s):
+- footage/launch-trailer.mp4 6.4s–9.2s (Jason polishing the boat), half speed with frame interpolation (minterpolate to 60fps, then 2x slower) so it plays smoothly
 Text: ELA: "VOCÊ NUNCA LIMPA NADA EM CASA" / EU NA SEMANA ANTERIOR AO GTA VI:
