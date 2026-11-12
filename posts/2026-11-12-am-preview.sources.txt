@@ -1,1 +1,4 @@
-sources: launch-trailer 7.6 (1.6s), trailer2 38.6 (1.6s), launch-trailer 57.95 (1.25s)
+Option A, short cut (2.9s):
+- footage/launch-trailer.mp4 7.6s (1.6s) — polishing
+- footage/launch-trailer.mp4 57.95s (1.25s) — couch
+Text: ELA: "VOCÊ NUNCA LIMPA NADA EM CASA" / EU NA SEMANA DO GTA 6:
