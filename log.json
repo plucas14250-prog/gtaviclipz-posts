@@ -168,10 +168,11 @@
  {
   "date": "2026-11-12",
   "slot": "am",
-  "format": "reel-manual",
+  "format": "reel-manual-posted",
   "headline": "ELA: \"VOCÊ NUNCA LIMPA NADA EM CASA\" / EU NA SEMANA ANTERIOR AO GTA VI:",
   "image": "posts/2026-11-12-am.mp4",
   "source": "footage/launch-trailer.mp4 6.4-9.2 (polishing), half speed with frame interpolation",
-  "permalink": null
+  "permalink": "https://www.instagram.com/reel/DfpS5UgxD-C/",
+  "note": "posted 14:45 UTC (9:45 ET); owner edited caption opener to \"deixar a casa brilhando\""
  }
 ]
