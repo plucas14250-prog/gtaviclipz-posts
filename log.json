@@ -164,5 +164,14 @@
   "image": "posts/2026-11-11-pm.mp4",
   "source": "footage/launch-trailer.mp4 cuts 71.45,64.35,69.35,70.25,44.55,73.4",
   "permalink": "https://www.instagram.com/reel/DfnmjLWAK05/"
+ },
+ {
+  "date": "2026-11-12",
+  "slot": "am",
+  "format": "reel-manual",
+  "headline": "ELA: \"VOCÊ NUNCA LIMPA NADA EM CASA\" / EU NA SEMANA ANTERIOR AO GTA VI:",
+  "image": "posts/2026-11-12-am.mp4",
+  "source": "footage/launch-trailer.mp4 6.4-9.2 (polishing), half speed with frame interpolation",
+  "permalink": null
  }
 ]
