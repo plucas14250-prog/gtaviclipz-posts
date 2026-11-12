@@ -162,3 +162,9 @@ Append to `log.json`: `{"date", "slot" (am/pm), "format", "headline", "image", "
 - Never repost other creators' clips or images without permission.
 - Keep it safe for all ages: no hate, no politics, no misleading claims.
 - Don't commit the caption file or anything secret.
+
+## Short on-screen text (added 11/12, views capped ~200)
+- Headline: ONE line, 5-7 words, readable in the first second. No yellow line unless it is the punchline.
+- Frame 0 must show a face and the hook together; never hide the face behind the text.
+- Prefer original footage (owner's own PS5 gameplay from 11/19, owner's face or voice) over trailer shots every big page already posts.
+- For A/B choices, suggest the owner posts both as Trial Reels and keeps the winner.
