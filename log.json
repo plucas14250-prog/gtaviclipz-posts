@@ -189,10 +189,10 @@
   "date": "2026-11-13",
   "slot": "am",
   "format": "reel-manual",
-  "headline": "EU LIGANDO PRO CHEFE DIA 19",
+  "headline": "QUEM ME MANDAR SPOILER DIA 19:",
   "image": "posts/2026-11-13-am.mp4",
-  "source": "footage/launch-trailer.mp4 cuts 11.9,57.95",
+  "source": "trailer1 68.8 + launch-trailer 72.35 + trailer2 114.6",
   "permalink": null,
-  "note": "prepare run fired late (15:16 UTC); sent for immediate posting"
+  "note": "prepare run fired late (15:16 UTC); sent for immediate posting; replaced phone-call meme (repeat of 11/11 migué joke)"
  }
 ]
