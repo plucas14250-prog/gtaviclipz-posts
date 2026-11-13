@@ -168,3 +168,4 @@ Append to `log.json`: `{"date", "slot" (am/pm), "format", "headline", "image", "
 - Frame 0 must show a face and the hook together; never hide the face behind the text.
 - Prefer original footage (owner's own PS5 gameplay from 11/19, owner's face or voice) over trailer shots every big page already posts.
 - For A/B choices, suggest the owner posts both as Trial Reels and keeps the winner.
+- No repeated jokes: before writing a meme, read every past caption and headline in log.json. Jokes used so far: PS5/house cleaning, calling in sick / "migué no trabalho", buying the game, Vice City 2002 nostalgia, spoiler threats, pre-load, midnight unlock, police remembering clothes.
