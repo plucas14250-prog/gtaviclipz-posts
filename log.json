@@ -199,9 +199,10 @@
   "date": "2026-11-13",
   "slot": "pm",
   "format": "reel-manual",
-  "headline": "ISSO AÍ É COPACABANA, NINGUÉM ME ENGANA",
+  "headline": "GTA 6 RECEBEU UPDATE OBRIGATÓRIO HOJE",
   "image": "posts/2026-11-13-pm.mp4",
-  "source": "trailer1 21.75 + trailer2 38.5, 79.55",
-  "permalink": null
+  "source": "launch-trailer 39.95, 35.95, 66.5; news: update 1.002.000",
+  "permalink": null,
+  "note": "replaced Copacabana Reel (kept as posts/2026-11-13-pm-copacabana.*)"
  }
 ]
