@@ -184,5 +184,15 @@
   "source": "footage/trailer2.mp4 cuts 141.9,18.8,14.6,140.0",
   "permalink": "https://www.instagram.com/reel/DfqKdG6g5VX/",
   "note": "posted 2026-11-12T22:50:11+0000"
+ },
+ {
+  "date": "2026-11-13",
+  "slot": "am",
+  "format": "reel-manual",
+  "headline": "EU LIGANDO PRO CHEFE DIA 19",
+  "image": "posts/2026-11-13-am.mp4",
+  "source": "footage/launch-trailer.mp4 cuts 11.9,57.95",
+  "permalink": null,
+  "note": "prepare run fired late (15:16 UTC); sent for immediate posting"
  }
 ]
