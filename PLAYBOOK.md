@@ -169,3 +169,8 @@ Append to `log.json`: `{"date", "slot" (am/pm), "format", "headline", "image", "
 - Prefer original footage (owner's own PS5 gameplay from 11/19, owner's face or voice) over trailer shots every big page already posts.
 - For A/B choices, suggest the owner posts both as Trial Reels and keeps the winner.
 - No repeated jokes: before writing a meme, read every past caption and headline in log.json. Jokes used so far: PS5/house cleaning, calling in sick / "migué no trabalho", buying the game, Vice City 2002 nostalgia, spoiler threats, pre-load, midnight unlock, police remembering clothes.
+
+## Schedule always wins (owner rule, 11/14)
+- Every scheduled slot (am 11:53 / pm 19:53 Brasília) gets its own post, always.
+- Anything the owner posts in between is EXTRA: log it with slot "extra" and posts/<date>-extra*. It never fills or skips a slot.
+- The "already posted" check only counts entries whose slot is "am" or "pm".
