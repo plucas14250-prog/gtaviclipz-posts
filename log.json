@@ -208,10 +208,21 @@
  {
   "date": "2026-11-14",
   "slot": "am",
-  "format": "reel-manual",
+  "format": "reel-manual-posted",
   "headline": "ISSO AÍ É COPACABANA, NINGUÉM ME ENGANA",
   "image": "posts/2026-11-14-am.mp4",
   "source": "trailer1 21.75 + trailer2 38.5, 79.55",
-  "permalink": null
+  "permalink": "https://www.instagram.com/reel/Dfu-0tPAqYY/",
+  "note": "posted 19:42 UTC (after the pm Reel)"
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "pm",
+  "format": "reel-manual-posted",
+  "headline": "PARECE QUE CHEGA O APOCALIPSE MAS NÃO CHEGA DIA 19",
+  "image": "posts/2026-11-14-pm.mp4",
+  "source": "owner footage footage/ps5-tv-gta6.mp4, half speed, countdown highlight",
+  "permalink": "https://www.instagram.com/reel/DfushNlgNoL/",
+  "note": "owner posted 17:02 UTC, before the am Reel; caption opener edited by owner"
  }
 ]
