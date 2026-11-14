@@ -193,16 +193,16 @@
   "image": "posts/2026-11-13-am.mp4",
   "source": "trailer1 65.65 (slow-mo wheelies) + 66.7 (Weazel News dirt-bike report)",
   "permalink": "https://www.instagram.com/reel/DfsNan_A7f7/",
-  "note": "prepare run fired late (15:16 UTC); sent for immediate posting; replaced phone-call meme (repeat of 11/11 migué joke); posted 17:52 UTC"
+  "note": "prepare run fired late (15:16 UTC); sent for immediate posting; replaced phone-call meme (repeat of 11/11 migué joke); posted 17:52 UTC; no longer returned by the API on 11/13 evening (likely deleted by owner, unconfirmed)"
  },
  {
   "date": "2026-11-13",
   "slot": "pm",
-  "format": "reel-manual",
+  "format": "reel-manual-posted",
   "headline": "GTA 6 RECEBEU UPDATE OBRIGATÓRIO HOJE",
   "image": "posts/2026-11-13-pm.mp4",
   "source": "launch-trailer 39.95, 35.95, 66.5; news: update 1.002.000",
-  "permalink": null,
+  "permalink": "https://www.instagram.com/reel/Dfsw_SAAcVo/",
   "note": "replaced Copacabana Reel (kept as posts/2026-11-13-pm-copacabana.*)"
  }
 ]
