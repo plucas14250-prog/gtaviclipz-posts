@@ -1,1 +1,1 @@
-Araguaia Reel (Brazil-in-GTA series). trailer1.mp4 55.1 (mud party, faces) + 19.4 (swamp at sunrise). Natural speed, 3.5s. Text: E ISSO AÍ É O ARAGUAIA, CERTEZA
+Araguaia Reel (Brazil-in-GTA series). trailer1.mp4 55.1 (mud party, faces) + 19.4 (swamp at sunrise). mud shot at half speed with frame interpolation, swamp/flamingos at natural speed, 7.0s. Text: E ISSO AÍ É O ARAGUAIA, CERTEZA
