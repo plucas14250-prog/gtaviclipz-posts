@@ -1,1 +1,2 @@
 Owner footage: footage/ps5-tv-gta6.mp4 (from IMG_0819.mov, 1.48s, 60fps, the GTA VI page on the owner's TV with the PS5 below). Half speed (60fps source, so it stays smooth), 2.9s. Text from the owner: PARECE QUE CHEGA O APOCALIPSE MAS NÃO CHEGA DIA 19. No Rockstar credit line on screen (owner's own recording).
+Yellow glow outline added around the PS5 countdown button (shows 4d 12 23 11, the owner's local unlock time), so the caption says 'Menos de 5 dias' instead of 'Faltam 5 dias'.
