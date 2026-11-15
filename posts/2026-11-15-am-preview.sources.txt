@@ -1,1 +1,1 @@
-Replaced the Sunday Reel (owner didn't like it; kept nothing). trailer2.mp4 117.15 (woman on the couch looking up, half speed with frame interpolation) + 117.97 (car exploding). 2.3s. Text: ELA DESCOBRINDO QUE DIA 19 EU SUMO
+Owner asked for Lucia: first shot replaced with trailer1.mp4 9.62 (Lucia in the orange prison uniform, half speed with frame interpolation), then trailer2.mp4 117.97 (explosion). 3.3s.
