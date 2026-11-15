@@ -174,3 +174,4 @@ Append to `log.json`: `{"date", "slot" (am/pm), "format", "headline", "image", "
 - Every scheduled slot (am 11:53 / pm 19:53 Brasília) gets its own post, always.
 - Anything the owner posts in between is EXTRA: log it with slot "extra" and posts/<date>-extra*. It never fills or skips a slot.
 - The "already posted" check only counts entries whose slot is "am" or "pm".
+- Before sending any Reel, check the last 3 frames of every cut: a cut that runs to the end of a shot can pick up one frame of the next shot.
