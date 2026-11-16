@@ -175,3 +175,10 @@ Append to `log.json`: `{"date", "slot" (am/pm), "format", "headline", "image", "
 - Anything the owner posts in between is EXTRA: log it with slot "extra" and posts/<date>-extra*. It never fills or skips a slot.
 - The "already posted" check only counts entries whose slot is "am" or "pm".
 - Before sending any Reel, check the last 3 frames of every cut: a cut that runs to the end of a shot can pick up one frame of the next shot.
+
+## Week 1 learnings (report 11/16: 186 -> 219 followers, +33)
+- Best (9-10 likes): "me/my friend" memes with nostalgia or a relatable situation (Vice City 2002 vs 2026, calling in sick), real breaking news with a strong hook (title-screen music), and the owner's own AI clip (5 estrelas).
+- Worst (0-3 likes): the "GTA 6 is Brazil" place series (Copacabana 3, Araguaia 2, grau deleted), single images (1-4), carousels (2), the "mozão" couple meme (0 after 2h).
+- Stop the Brazil-place series. Keep Brazilian slang in the text, but the joke must be about the viewer ("eu", "seu amigo"), not a place.
+- Reels only. No single images or carousels unless the owner asks.
+- Owner-made clips (phone footage, AI clips) beat trailer cuts: ask the owner for one each day, and from 11/19 use their own gameplay.

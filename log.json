@@ -258,10 +258,20 @@
  {
   "date": "2026-11-15",
   "slot": "pm",
-  "format": "reel-manual",
+  "format": "reel-manual-posted",
   "headline": "EU E O MOZÃO ESPERANDO DIA 19",
   "image": "posts/2026-11-15-pm.mp4",
   "source": "trailer2 81.45, 98.5, 97.7",
-  "permalink": null
+  "permalink": "https://www.instagram.com/reel/Dfx3qC2AsDc/",
+  "note": "posted 22:37 UTC"
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "extra",
+  "format": "image-owner-posted",
+  "headline": "(owner image) Parece que alguém já está se preparando para o dia 19",
+  "image": null,
+  "source": "owner",
+  "permalink": "https://www.instagram.com/p/DfvP0mqA57W/"
  }
 ]
