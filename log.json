@@ -311,5 +311,32 @@
   "image": "posts/2026-11-17-pm.mp4",
   "source": "trailer1 61.8, 62.58 + launch-trailer 52.4; news: review embargo reported 11/18",
   "permalink": null
+ },
+ {
+  "date": "2026-11-18",
+  "slot": "am",
+  "format": "reel-manual",
+  "headline": "O MAPA DO GTA 6 COMEÇA APAGADO",
+  "image": "posts/2026-11-18-am.mp4",
+  "source": "footage/creator-gta6-map-menu.mp4 cuts 3.8,10.4,22.0 (creator Short, map menu; credit TBD)",
+  "permalink": null
+ },
+ {
+  "date": "2026-11-18",
+  "slot": "pm",
+  "format": "reel-manual",
+  "headline": "EU NO GTA 6 IGNORANDO A HISTÓRIA",
+  "image": "posts/2026-11-18-pm.mp4",
+  "source": "footage/creator-gta6-basketball.mp4 cuts 12.5,24.5 (creator Short, basketball; credit TBD)",
+  "permalink": null
+ },
+ {
+  "date": "2026-11-18",
+  "slot": "extra",
+  "format": "reel-manual",
+  "headline": "EU NO PRIMEIRO ASSALTO DO GTA 6",
+  "image": "posts/2026-11-18-extra.mp4",
+  "source": "footage/creator-gta6-lucia-robbery.mp4 cuts 24.2,27.0,52.6 (creator Short, Lucia robbery; credit TBD)",
+  "permalink": null
  }
 ]
