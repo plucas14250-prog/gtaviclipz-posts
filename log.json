@@ -297,38 +297,40 @@
  {
   "date": "2026-11-17",
   "slot": "am",
-  "format": "reel-manual",
+  "format": "reel-manual-posted",
   "headline": "LIGANDO PRO PARÇA: \"JÁ BAIXOU AÍ?\"",
   "image": "posts/2026-11-17-am.mp4",
   "source": "launch-trailer 11.9 (slow-mo, Jason on the phone)",
-  "permalink": null
+  "permalink": "https://www.instagram.com/reel/Df2lkiogJd1/",
+  "note": "probably this one (owner caption \"Só eu?\"), unconfirmed"
  },
  {
   "date": "2026-11-17",
   "slot": "pm",
-  "format": "reel-manual",
+  "format": "reel-manual-posted",
   "headline": "AS NOTAS DO GTA 6 SAEM AMANHÃ / DETALHES NA LEGENDA",
   "image": "posts/2026-11-17-pm.mp4",
   "source": "trailer1 61.8, 62.58 + launch-trailer 52.4; news: review embargo reported 11/18",
-  "permalink": null
+  "permalink": "https://www.instagram.com/reel/Df3Id5YAR4M/"
  },
  {
   "date": "2026-11-18",
   "slot": "extra",
-  "format": "reel-manual",
+  "format": "reel-manual-posted",
   "headline": "O MAPA NOS PRIMEIROS MINUTOS DO GTA 6",
   "image": "posts/2026-11-18-extra2.mp4",
   "source": "footage/creator-gta6-map-menu.mp4 cuts 3.8,10.4,22.0 (creator Short, map menu; credit TBD)",
-  "permalink": null
+  "permalink": "https://www.instagram.com/reel/Df4ylPMxtXR/"
  },
  {
   "date": "2026-11-18",
-  "slot": "pm",
-  "format": "reel-manual",
+  "slot": "extra",
+  "format": "reel-manual-posted",
   "headline": "JASON JOGANDO BASQUETE NOS PRIMEIROS MINUTOS DO GTA 6",
   "image": "posts/2026-11-18-pm.mp4",
   "source": "footage/creator-gta6-basketball.mp4 cuts 12.5,24.5 (creator Short, basketball; credit TBD)",
-  "permalink": null
+  "permalink": "https://www.instagram.com/reel/Df4z7ghg7tC/",
+  "note": "owner posted at 15:20 UTC, so it became an extra"
  },
  {
   "date": "2026-11-18",
@@ -341,11 +343,12 @@
  },
  {
   "date": "2026-11-18",
-  "slot": "am",
+  "slot": "pm",
   "format": "reel-manual",
   "headline": "GTA 6 CHEGA AMANHÃ COM NOTA 99",
   "image": "posts/2026-11-18-am.mp4",
   "source": "trailer2 141.9 + launch-trailer 72.35; news: Metacritic 99",
-  "permalink": null
+  "permalink": null,
+  "note": "Metacritic Reel not posted in the morning; moved to the 19:53 slot (title still valid: chega amanhã)"
  }
 ]
