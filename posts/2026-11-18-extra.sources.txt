@@ -1,7 +1,7 @@
 Source clip: footage/creator-gta6-lucia-robbery.mp4 (copy of "Lucias-First-Robbery-SnapYT.App.mp4", a creator's YouTube Short; creator not identified yet)
 Source crop: 1080x630 at y=972 (gameplay only; face cam, title band and the game's English subtitles with swearing left out)
 Cuts (start:dur:x): 24.2:2.6:0.5 (store fight), 27.0:2.0:0.5 (Lucia over the clerk), 52.6:3.85:0.5 (police car; ends before the shot change at 56.53)
-On-screen text: EU NO PRIMEIRO ASSALTO DO GTA 6
+On-screen text: GTA 6 LANÇOU LÁ FORA: O 1º ASSALTO (owner asked for launch-focused titles)
 Credit on video: none (--credit ""); creator credited in caption
 Note: early story mission (prologue), light spoiler
 Length: 8.4 s, no audio
