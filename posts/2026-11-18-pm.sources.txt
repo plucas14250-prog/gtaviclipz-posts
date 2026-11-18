@@ -1,6 +1,6 @@
 Source clip: footage/creator-gta6-basketball.mp4 (copy of "Basketball-In-GTA-SnapYT.App.mp4", a creator's YouTube Short; creator not identified yet)
 Source crop: 1080x748 at y=970 (gameplay area only; face cam and title band left out)
 Cuts (start:dur:x): 12.5:5.5:0.22 (Jason walking to the hoop with the ball), 24.5:3.5:0.25 (shot at the hoop under the stilt house)
-On-screen text: GTA 6 LANÇA AMANHÃ E TEM BASQUETE (owner asked for launch-focused titles)
+On-screen text: JASON JOGANDO BASQUETE NOS PRIMEIROS MINUTOS DO GTA 6 (owner: launch + what the clip shows)
 Credit on video: none (--credit ""); creator credited in caption
 Length: 9.0 s, no audio

@@ -182,3 +182,4 @@ Append to `log.json`: `{"date", "slot" (am/pm), "format", "headline", "image", "
 - Stop the Brazil-place series. Keep Brazilian slang in the text, but the joke must be about the viewer ("eu", "seu amigo"), not a place.
 - Reels only. No single images or carousels unless the owner asks.
 - Owner-made clips (phone footage, AI clips) beat trailer cuts: ask the owner for one each day, and from 11/19 use their own gameplay.
+- Gameplay titles (owner, 11/18): say what the clip shows AND tie it to the launch, e.g. "JASON JOGANDO BASQUETE NOS PRIMEIROS MINUTOS DO GTA 6".
