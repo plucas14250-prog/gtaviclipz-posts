@@ -1,0 +1,6 @@
+Source clip: footage/creator-gta6-map-menu.mp4 (copy of "The-GTA-6-SnapYT.App.mp4", a creator's YouTube Short; creator not identified yet)
+Source crop: 1080x1080 at y=640 (map area only; streamer face cam and title band left out)
+Cuts (start:dur:x): 3.8:2.2:0.5 (Keys lit, Key Lento), 10.4:2.0:0.5 (dark counties), 22.0:1.5:0.5 (Kelly County -> LEONIDA title; ends before the menu at 23.62)
+On-screen text: O MAPA DO GTA 6 COMEÇA APAGADO
+Credit on video: none (--credit ""); creator credited in caption
+Length: 5.7 s, no audio (owner adds a trending song)
