@@ -359,5 +359,14 @@
   "image": "posts/2026-11-19-am.mp4",
   "source": "trailer2 141.9 + launch-trailer 72.35; launch day + Metacritic 99",
   "permalink": null
+ },
+ {
+  "date": "2026-11-19",
+  "slot": "pm",
+  "format": "reel-manual",
+  "headline": "MINHA PRIMEIRA NOITE NO GTA 6:",
+  "image": "posts/2026-11-19-pm.mp4",
+  "source": "launch-trailer 60.45, 61.35 + trailer1 45.5",
+  "permalink": null
  }
 ]
