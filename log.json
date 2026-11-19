@@ -349,6 +349,15 @@
   "image": "posts/2026-11-18-pm.mp4",
   "source": "trailer2 141.9 + launch-trailer 72.35; news: Metacritic 99",
   "permalink": null,
-  "note": "Metacritic Reel not posted in the morning; moved to the 19:53 slot (title still valid: chega amanhã)"
+  "note": "Metacritic Reel not posted in the morning; moved to the 19:53 slot (title still valid: chega amanhã); never posted (slot missed)"
+ },
+ {
+  "date": "2026-11-19",
+  "slot": "am",
+  "format": "reel-manual",
+  "headline": "GTA 6 LANÇOU HOJE COM NOTA 99",
+  "image": "posts/2026-11-19-am.mp4",
+  "source": "trailer2 141.9 + launch-trailer 72.35; launch day + Metacritic 99",
+  "permalink": null
  }
 ]
