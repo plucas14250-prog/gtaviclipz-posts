@@ -358,7 +358,8 @@
   "headline": "GTA 6 LANÇOU HOJE COM NOTA 99",
   "image": "posts/2026-11-19-am.mp4",
   "source": "trailer2 141.9 + launch-trailer 72.35; launch day + Metacritic 99",
-  "permalink": null
+  "permalink": null,
+  "note": "; never posted (slot missed)"
  },
  {
   "date": "2026-11-19",
@@ -367,7 +368,8 @@
   "headline": "MINHA PRIMEIRA NOITE NO GTA 6:",
   "image": "posts/2026-11-19-pm.mp4",
   "source": "launch-trailer 60.45, 61.35 + trailer1 45.5",
-  "permalink": null
+  "permalink": null,
+  "note": "; never posted (slot missed)"
  },
  {
   "date": "2026-11-20",
@@ -378,5 +380,14 @@
   "source": "owner",
   "permalink": "https://www.instagram.com/reel/Df9ygyagV4a/",
   "note": "posted 13:43 UTC"
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "am",
+  "format": "reel-manual",
+  "headline": "GTA 6 FEZ US$ 2,36 BILHÕES EM 1 DIA",
+  "image": "posts/2026-11-20-am.mp4",
+  "source": "launch-trailer 34.45 + trailer2 33.25; Sensor Tower estimate",
+  "permalink": null
  }
 ]
