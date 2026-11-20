@@ -389,5 +389,14 @@
   "image": "posts/2026-11-20-am.mp4",
   "source": "launch-trailer 34.45 + trailer2 33.25; Sensor Tower estimate",
   "permalink": null
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "pm",
+  "format": "reel-manual",
+  "headline": "AMANHÃ TEM FESTIVAL DO GTA 6 EM MIAMI",
+  "image": "posts/2026-11-20-pm.mp4",
+  "source": "trailer2 100.92; festival 11/21",
+  "permalink": null
  }
 ]
