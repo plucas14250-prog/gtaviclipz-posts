@@ -409,5 +409,14 @@
   "image": "posts/2026-11-21-am.mp4",
   "source": "trailer2 100.92; festival 11/21",
   "permalink": null
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "pm",
+  "format": "reel-manual",
+  "headline": "MEU PRIMEIRO FIM DE SEMANA DE GTA 6:",
+  "image": "posts/2026-11-21-pm.mp4",
+  "source": "launch-trailer 60.45, 61.35 + trailer1 45.5",
+  "permalink": null
  }
 ]
