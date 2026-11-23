@@ -183,3 +183,9 @@ Append to `log.json`: `{"date", "slot" (am/pm), "format", "headline", "image", "
 - Reels only. No single images or carousels unless the owner asks.
 - Owner-made clips (phone footage, AI clips) beat trailer cuts: ask the owner for one each day, and from 11/19 use their own gameplay.
 - Gameplay titles (owner, 11/18): say what the clip shows AND tie it to the launch, e.g. "JASON JOGANDO BASQUETE NOS PRIMEIROS MINUTOS DO GTA 6".
+
+## Week 2 learnings (report 11/23: 219 -> 252 followers, +33)
+- Only 8 posts went up this week; 10 of the 14 scheduled Reels since 11/18 were never posted. A Reel that isn't posted does nothing, so make fewer, better ones and reuse unposted ones before making new ones.
+- Best: the owner's own "Só eu? 😂" (10 likes) with a 2-word caption. Everything else got 0-2 likes.
+- Test short captions: hook line + hashtags, in the owner's casual voice ("Só eu? 😂", "Ta fogo 🥵"). Keep long captions only for real news.
+- After launch (11/19) everyone has the game: gameplay moments beat trailer cuts. Ask the owner for clips first; use trailer footage only as a fallback.
