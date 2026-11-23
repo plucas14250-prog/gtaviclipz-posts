@@ -459,5 +459,14 @@
   "image": "posts/2026-11-23-am.mp4",
   "source": "trailer2 141.9 + launch-trailer 72.35; short caption test",
   "permalink": null
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "pm",
+  "format": "reel-manual",
+  "headline": "GTA 6 FEZ US$ 2,36 BILHÕES EM 1 DIA",
+  "image": "posts/2026-11-23-pm.mp4",
+  "source": "reuse of 11/20 am; short caption test",
+  "permalink": null
  }
 ]
