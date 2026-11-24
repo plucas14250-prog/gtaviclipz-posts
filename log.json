@@ -458,7 +458,8 @@
   "headline": "NOTA 99: MAIOR NOTA DA HISTÓRIA",
   "image": "posts/2026-11-23-am.mp4",
   "source": "trailer2 141.9 + launch-trailer 72.35; short caption test",
-  "permalink": null
+  "permalink": null,
+  "note": "; never posted (slot missed)"
  },
  {
   "date": "2026-11-23",
@@ -467,6 +468,7 @@
   "headline": "GTA 6 FEZ US$ 2,36 BILHÕES EM 1 DIA",
   "image": "posts/2026-11-23-pm.mp4",
   "source": "reuse of 11/20 am; short caption test",
-  "permalink": null
+  "permalink": null,
+  "note": "; never posted (slot missed)"
  }
 ]
