@@ -470,5 +470,14 @@
   "source": "reuse of 11/20 am; short caption test",
   "permalink": null,
   "note": "; never posted (slot missed)"
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "am",
+  "format": "reel-manual",
+  "headline": "NOTA 99: MAIOR NOTA DA HISTÓRIA",
+  "image": "posts/2026-11-24-am.mp4",
+  "source": "reuse of 11/23 am",
+  "permalink": null
  }
 ]
